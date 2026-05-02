@@ -35,9 +35,14 @@
 /* ── Reset & Base ────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
 
 body {
+  width: 100%;
+  max-width: 100%;
   margin: 0;
   color: var(--ink);
   background: var(--bg);
@@ -48,6 +53,7 @@ body {
   opacity: 0;
   animation: pageReveal 600ms ease forwards;
   -webkit-tap-highlight-color: rgba(46, 134, 222, 0.15);
+  overflow-x: clip;
 }
 
 body::before {
@@ -102,9 +108,13 @@ p { margin: 0 0 1rem; }
 /* ── Layout ──────────────────────────────────────────────── */
 .container {
   width: min(1200px, calc(100% - 40px));
+  max-width: 100%;
   margin-inline: auto;
 }
-.narrow { width: min(840px, calc(100% - 40px)); }
+.narrow {
+  width: min(840px, calc(100% - 40px));
+  max-width: 100%;
+}
 
 /* ── Skip link ───────────────────────────────────────────── */
 .skip-link {
@@ -311,6 +321,14 @@ p { margin: 0 0 1rem; }
   grid-template-columns: 1.05fr 0.95fr;
   gap: clamp(2rem, 5vw, 4.5rem);
   align-items: center;
+  min-width: 0;
+}
+
+.hero-grid > *,
+.split-grid > *,
+.contact-grid > *,
+.footer-grid > * {
+  min-width: 0;
 }
 
 .hero-copy p {
@@ -1343,6 +1361,11 @@ textarea { resize: vertical; min-height: 120px; }
 }
 
 @media (max-width: 640px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   .form-grid {
     grid-template-columns: 1fr;
     gap: 0.2rem;
@@ -1370,7 +1393,19 @@ textarea { resize: vertical; min-height: 120px; }
 
   body { font-size: 17px; }
 
-  .container, .narrow { width: min(100% - 24px, 1120px); }
+  .container, .narrow { width: 100%; }
+
+  .section,
+  .page-hero,
+  .hero-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .contact-panel,
+  .booking-form {
+    padding: clamp(1.1rem, 5vw, 1.4rem);
+  }
 
   .brand img { width: 138px; height: 44px; }
   .footer-brand img { width: 150px; }
@@ -1401,20 +1436,22 @@ textarea { resize: vertical; min-height: 120px; }
   .single-profile .profile-card { grid-template-columns: 1fr; }
 
   .chatbot {
-    right: 16px;
+    right: max(10px, env(safe-area-inset-right));
     left: auto;
-    bottom: calc(16px + env(safe-area-inset-bottom));
+    bottom: calc(10px + env(safe-area-inset-bottom));
     width: auto;
+    max-width: calc(100vw - 20px);
   }
   .fab-stack { width: auto; }
   .whatsapp-fab,
   .chat-toggle {
-    width: 54px;
-    height: 54px;
+    width: 50px;
+    height: 50px;
     flex: 0 0 auto;
   }
   .chat-panel {
-    width: min(340px, calc(100vw - 32px));
+    width: min(340px, calc(100vw - 20px));
+    max-height: calc(100dvh - 120px);
   }
 
   /* Reduce animations on mobile */
@@ -1425,9 +1462,9 @@ textarea { resize: vertical; min-height: 120px; }
 
 @media (max-width: 480px) {
   .section,
-  .page-hero { padding: 40px 20px; }
+  .page-hero { padding-top: 40px; padding-bottom: 40px; }
 
-  .hero-section { padding: 2rem 20px 2.2rem; }
+  .hero-section { padding-top: 2rem; padding-bottom: 2.2rem; }
 
   h1 { font-size: clamp(1.95rem, 8.4vw, 2.6rem); }
   h2 { font-size: clamp(1.45rem, 6.5vw, 1.9rem); }
@@ -1449,8 +1486,20 @@ textarea { resize: vertical; min-height: 120px; }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
+  .container,
+  .narrow {
+    width: 100%;
+  }
+
   .section,
-  .page-hero { padding: 52px 20px; }
+  .page-hero {
+    padding: 52px 12px;
+  }
+
+  .hero-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 
   .highlight-grid,
   .service-detail-grid,

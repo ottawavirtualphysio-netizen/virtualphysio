@@ -190,6 +190,10 @@ if (bookingForm) {
   const emailInput = bookingForm.querySelector('input[name="email"]');
   const nameInput = bookingForm.querySelector('input[name="name"]');
   const serviceInput = bookingForm.querySelector('select[name="service"]');
+  const formAction = bookingForm.getAttribute("action") || window.location.pathname || "/";
+  const netlifyEndpoint = formAction.startsWith("http") || window.location.origin === "null"
+    ? formAction
+    : new URL(formAction, window.location.origin).pathname;
 
   const encodeFormBody = (formData) =>
     new URLSearchParams(Array.from(formData.entries()).map(([key, value]) => [key, String(value)])).toString();
@@ -319,9 +323,12 @@ if (bookingForm) {
             headers: { "Content-Type": "text/plain;charset=utf-8" },
             body: JSON.stringify(payload)
           })
-        : await fetch("/", {
+        : await fetch(netlifyEndpoint, {
             method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+              Accept: "application/json"
+            },
             body: encodeFormBody(submitData)
           });
 
@@ -383,9 +390,9 @@ if (bookingForm) {
       }
 
       if (status) {
-        status.textContent = "Unable to submit right now. Please try again.";
+        status.textContent = "Unable to submit right now. Please use WhatsApp Quick Contact or call +1 343 204 0699.";
       }
-      showToast("Submission failed. Please try again.", "error");
+      showToast("Submission failed. Please use WhatsApp or call.", "error");
 
       if (submitButton) {
         submitButton.classList.remove("is-loading");

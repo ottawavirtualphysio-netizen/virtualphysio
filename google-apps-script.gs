@@ -25,6 +25,7 @@ function doPost(e) {
       payload.service || "",
       payload.date || "",
       payload.time || "",
+      payload.problemArea || "",
       payload.message || "",
       payload.source || ""
     ]);

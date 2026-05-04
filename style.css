@@ -1533,6 +1533,26 @@ textarea { resize: vertical; min-height: 120px; }
 }
 
 @media (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .container,
+  .narrow {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .brand img {
+    max-width: calc(100vw - 40px);
+    width: auto;
+    height: auto;
+  }
+
   .hero-grid {
     display: flex;
     flex-direction: column;

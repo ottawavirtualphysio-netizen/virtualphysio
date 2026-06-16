@@ -17,6 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto+Condensed:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="profile-page.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -81,41 +82,38 @@
 
     <section class="section soft-bg" aria-labelledby="therapists">
       <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Therapist profile</span>
-          <h2 id="therapists">Meet Drashti Chauhan, Physiotherapist</h2>
-        </div>
-        <div class="profile-grid single-profile">
-          <article class="profile-card reveal">
-            <img src="drashti-profile.png" alt="Portrait of Drashti Chauhan, physiotherapist" width="400" height="520" loading="lazy">
-            <div class="profile-copy">
-              <h3>Drashti Chauhan</h3>
-              <p class="role">Physiotherapist</p>
-              <p>I hold a Bachelor of Physiotherapy degree from India and have gained valuable exposure working as a Physiotherapy Assistant in both long-term care and private practice settings. These experiences helped me understand the diverse rehabilitation needs of individuals across different stages of life.</p>
-              <p>My clinical interests include vestibular rehabilitation, pelvic floor dysfunction, temporomandibular joint disorders, orthopedic and sports injuries, women's health, and prenatal and postpartum care. I have a special interest in treating diastasis recti and other core-related conditions.</p>
-              <p>Additional training includes Pelvic Floor Level 1, the APTEI TMJ course, and Trauma-Informed Care. My approach is holistic, empathetic and tailored to each patient's unique needs.</p>
-            </div>
-          </article>
-        </div>
+        <div class="profile-header"></div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="credentials-section">
       <div class="container">
         <div class="section-heading reveal">
-          <span class="eyebrow">Certifications</span>
-          <h2>Professional training</h2>
+          <span class="eyebrow">Education & Credentials</span>
+          <h2>Professional qualifications</h2>
         </div>
-        <div class="badge-grid reveal delay-1">
-          <span>Licensed Physiotherapy Practice</span>
-          <span>Pelvic Floor Level 1</span>
-          <span>TMJ Rehabilitation Training</span>
-          <span>Trauma-Informed Care</span>
-          <span>CPD Clinical Education</span>
-          <span>Virtual Rehabilitation Planning</span>
-        </div>
+        <div class="credentials-grid"></div>
       </div>
     </section>
+
+    <section class="specialties-section">
+      <div class="container">
+        <h2>Areas of Expertise</h2>
+        <div class="specialties-grid"></div>
+      </div>
+    </section>
+
+    <section class="community-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Community Involvement</span>
+          <h2>Giving back & education</h2>
+        </div>
+        <div class="community-grid"></div>
+      </div>
+    </section>
+
+    <section class="profile-cta"></section>
   </main>
 
   <footer class="site-footer">
@@ -142,5 +140,6 @@
     </div>
   </section>
   <script src="script.js" defer></script>
+  <script src="profile-page.js" defer></script>
 </body>
 </html>

@@ -171,36 +171,45 @@ const BLOG_ARTICLES = [
  * Initialize blog article system
  * Attaches event listeners to blog cards for dynamic article viewing
  */
+function handleBlogArticleCloseClick(event) {
+  const closeButton = event.target.closest(".article-close, [data-back-to-blog]");
+  const clickedBackdrop = event.target.classList.contains("article-backdrop");
+
+  if (closeButton || clickedBackdrop) {
+    closeArticleView();
+  }
+}
+
+function handleBlogArticleKeydown(event) {
+  if (event.key === "Escape" && document.querySelector(".article-modal.is-open")) {
+    closeArticleView();
+  }
+}
+
 function initBlogArticles() {
   const blogCards = document.querySelectorAll(".blog-card[data-article-slug]");
-  
+
   blogCards.forEach(card => {
     card.style.cursor = "pointer";
     card.addEventListener("click", (e) => {
-      // Allow link clicks to navigate normally
-      if (e.target.tagName === "A") return;
-      
+      const readLink = e.target.closest("a[data-slot='read-button']");
+      if (readLink) {
+        e.preventDefault();
+      }
+
       const slug = card.dataset.articleSlug;
       const article = BLOG_ARTICLES.find(a => a.slug === slug);
-      
+
       if (article) {
         showArticleView(article);
       }
     });
   });
 
-  // Handle back button if it exists
-  const backButton = document.querySelector("[data-back-to-blog]");
-  if (backButton) {
-    backButton.addEventListener("click", closeArticleView);
-  }
-
-  // Handle ESC key to close article
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && document.querySelector(".article-modal.is-open")) {
-      closeArticleView();
-    }
-  });
+  document.removeEventListener("click", handleBlogArticleCloseClick);
+  document.addEventListener("click", handleBlogArticleCloseClick);
+  document.removeEventListener("keydown", handleBlogArticleKeydown);
+  document.addEventListener("keydown", handleBlogArticleKeydown);
 }
 
 /**
@@ -246,13 +255,6 @@ function showArticleView(article) {
   modal.classList.add("is-open");
   document.body.style.overflow = "hidden";
 
-  // Attach close handler
-  const closeBtn = modal.querySelector("[data-back-to-blog]");
-  const backdrop = modal.querySelector(".article-backdrop");
-  
-  closeBtn.addEventListener("click", closeArticleView);
-  backdrop.addEventListener("click", closeArticleView);
-  
   // Scroll to top
   modal.querySelector(".article-container").scrollTop = 0;
 

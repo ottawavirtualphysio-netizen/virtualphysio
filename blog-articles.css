@@ -38,7 +38,7 @@
 .article-container {
   position: relative;
   z-index: 1;
-  max-width: 800px;
+  max-width: 56rem; /* constrain reading measure for improved legibility */
   width: 100%;
   background: var(--white);
   border-radius: var(--radius-lg);
@@ -82,13 +82,15 @@
 
 /* Article Content */
 .article-content {
-  padding: var(--space-lg);
-  line-height: 1.8;
+  padding: 3rem; /* generous side padding for comfortable reading */
+  line-height: 1.95; /* improved leading for readability */
 }
 
 .prose-article {
   font-size: 18px;
   color: var(--ink);
+  max-width: 56rem;
+  margin: 0 auto; /* center text column inside the container */
 }
 
 .article-meta {
@@ -99,6 +101,10 @@
   flex-wrap: wrap;
   font-size: 14px;
   color: var(--grey);
+}
+
+.article-meta .meta-sep {
+  margin: 0 6px;
 }
 
 .article-meta .category {
@@ -114,7 +120,7 @@
 }
 
 .article-content > h1 {
-  font-size: 2.5rem;
+  font-size: 1.8rem; /* downscale main title for a balanced reading layout */
   font-weight: 800;
   font-family: var(--font-display);
   line-height: 1.2;
@@ -138,11 +144,11 @@
 
 /* Article Typography */
 .prose-article h2 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
   font-family: var(--font-display);
   margin: var(--space-lg) 0 var(--space-md);
-  color: var(--blue-dark);
+  color: var(--ink); /* standard weight/color for section subtitles */
 }
 
 .prose-article h3 {
@@ -154,7 +160,7 @@
 
 .prose-article p {
   margin-bottom: var(--space-md);
-  line-height: 1.8;
+  line-height: 1.95; /* more relaxed leading for long-form reading */
   color: var(--ink);
 }
 

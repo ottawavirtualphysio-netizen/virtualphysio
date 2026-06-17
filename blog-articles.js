@@ -242,6 +242,7 @@ function showArticleView(article) {
         <div class="article-meta">
           <span class="category">${article.category}</span>
           <time datetime="${article.date}">${formattedDate}</time>
+          <span class="meta-sep" aria-hidden="true">•</span>
           <span class="read-time">${article.readTime}</span>
         </div>
         <h1>${article.title}</h1>

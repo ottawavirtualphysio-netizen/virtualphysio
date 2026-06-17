@@ -127,9 +127,9 @@ function renderSpecialties(containerId = ".specialties-grid") {
   const container = document.querySelector(containerId);
   if (!container) return;
 
+  // Render minimalist specialty cards (icons removed for a cleaner look)
   container.innerHTML = THERAPIST_PROFILE.specialties.map((specialty, index) => `
     <div class="specialty-card profile-scale" style="animation-delay: ${index * 80}ms">
-      <div class="specialty-icon">${specialty.icon}</div>
       <h3>${specialty.name}</h3>
       <p>${specialty.description}</p>
     </div>
@@ -145,9 +145,9 @@ function renderCredentials(containerId = ".credentials-grid") {
   const container = document.querySelector(containerId);
   if (!container) return;
 
+  // Render credentials without decorative icons so text autolayouts cleanly
   container.innerHTML = THERAPIST_PROFILE.credentials.map(cred => `
     <div class="credential-item profile-fade-in">
-      <div class="credential-icon">📜</div>
       <h4>${cred.title}</h4>
       <p class="credential-issuer">${cred.issuer || cred.institution}</p>
       <p class="credential-year">${cred.year}</p>
@@ -162,11 +162,12 @@ function renderCommunityInvolvement(containerId = ".community-grid") {
   const container = document.querySelector(containerId);
   if (!container) return;
 
+  // Use a compact pill for status and ensure card padding/gaps are clean
   container.innerHTML = THERAPIST_PROFILE.communityInvolvement.map(involvement => `
     <div class="community-item profile-slide-up">
+      <span class="status-pill">${involvement.date}</span>
       <h4>${involvement.title}</h4>
       <p>${involvement.description}</p>
-      <small>${involvement.date}</small>
     </div>
   `).join("");
 }

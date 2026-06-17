@@ -104,8 +104,8 @@
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  padding: var(--space-md);
-  text-align: center;
+  padding: 1.25rem; /* comfortable inner padding */
+  text-align: left; /* left-align text for cleaner reading */
   transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: var(--shadow-sm);
 }
@@ -117,9 +117,7 @@
 }
 
 .credential-icon {
-  font-size: 2.5rem;
-  margin-bottom: var(--space-sm);
-  display: block;
+  display: none; /* icons removed for a minimalist layout */
 }
 
 .credential-item h4 {
@@ -160,16 +158,16 @@
 .specialties-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: var(--space-md);
+  gap: var(--space-lg);
 }
 
 .specialty-card {
   background: var(--white);
   border-radius: var(--radius-lg);
-  padding: var(--space-lg);
+  padding: 1.25rem; /* consistent inner padding */
   box-shadow: var(--shadow-sm);
   transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-  text-align: center;
+  text-align: left;
   cursor: pointer;
   animation: fadeInUp 600ms ease forwards;
   opacity: 0;
@@ -181,9 +179,7 @@
 }
 
 .specialty-icon {
-  font-size: 2.5rem;
-  margin-bottom: var(--space-sm);
-  display: block;
+  display: none; /* removed decorative emoji/icon */
 }
 
 .specialty-card h3 {
@@ -215,14 +211,15 @@
 .community-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-md);
+  gap: var(--space-lg);
 }
 
 .community-item {
   background: linear-gradient(135deg, var(--green-light), var(--muted));
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  padding: var(--space-md);
+  padding: 1.5rem; /* ensure text does not touch borders */
+  position: relative; /* for status pill placement */
   transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -246,9 +243,21 @@
 }
 
 .community-item small {
-  color: var(--green);
+  display: none; /* replaced by the pill-style status */
+}
+
+/* Status pill for community cards */
+.status-pill {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255,255,255,0.9);
+  color: var(--green-dark);
+  padding: 6px 10px;
+  border-radius: 999px;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  box-shadow: var(--shadow-sm);
 }
 
 /* Profile CTA Section */
@@ -262,7 +271,7 @@
 }
 
 .profile-cta-content {
-  padding: var(--space-xl) var(--space-lg);
+  padding: 4rem var(--space-lg); /* generous vertical padding for balanced CTA */
   text-align: center;
 }
 
@@ -282,7 +291,7 @@
 
 .cta-buttons {
   display: flex;
-  gap: var(--space-md);
+  gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
 }

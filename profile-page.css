@@ -1,0 +1,432 @@
+/* ============================================================
+   Drashti Chauhan Profile Page Styling
+   Premium E-E-A-T focused design with animations
+   ============================================================ */
+
+/* Profile Hero Section */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: var(--space-xl) 0;
+  background: linear-gradient(135deg, var(--blue-light) 0%, var(--muted) 100%);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.profile-hero-content {
+  flex: 1;
+  padding: var(--space-lg);
+}
+
+.profile-hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family: var(--font-display);
+  margin: var(--space-sm) 0;
+  color: var(--ink);
+}
+
+.profile-title {
+  font-size: 1.3rem;
+  color: var(--blue);
+  font-weight: 600;
+  margin: var(--space-sm) 0 var(--space-md);
+}
+
+.profile-registration {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding: var(--space-sm) var(--space-md);
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--blue);
+}
+
+/* Quick Stats Grid */
+.profile-quick-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.profile-quick-stats .stat {
+  background: var(--white);
+  padding: var(--space-md);
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all 200ms ease;
+}
+
+.profile-quick-stats .stat:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.profile-quick-stats strong {
+  display: block;
+  font-size: 1.8rem;
+  color: var(--blue);
+  font-family: var(--font-display);
+  margin-bottom: 4px;
+}
+
+.profile-quick-stats span {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--grey);
+  font-weight: 500;
+}
+
+/* Credentials Grid */
+.credentials-section {
+  margin: var(--space-xl) 0;
+}
+
+.credentials-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  margin-bottom: var(--space-lg);
+  color: var(--ink);
+}
+
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-md);
+}
+
+.credential-item {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem; /* comfortable inner padding */
+  text-align: left; /* left-align text for cleaner reading */
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-sm);
+}
+
+.credential-item:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--blue);
+  transform: translateY(-4px);
+}
+
+.credential-icon {
+  display: none; /* icons removed for a minimalist layout */
+}
+
+.credential-item h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.credential-issuer {
+  font-size: 0.9rem;
+  color: var(--grey);
+  margin-bottom: 4px;
+}
+
+.credential-year {
+  font-size: 0.85rem;
+  color: var(--blue);
+  font-weight: 600;
+}
+
+/* Specialties Grid */
+.specialties-section {
+  margin: var(--space-xl) 0;
+  background: var(--muted);
+  padding: var(--space-xl);
+  border-radius: var(--radius-xl);
+}
+
+.specialties-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  margin-bottom: var(--space-lg);
+  color: var(--ink);
+}
+
+.specialties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-lg);
+}
+
+.specialty-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem; /* consistent inner padding */
+  box-shadow: var(--shadow-sm);
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: left;
+  cursor: pointer;
+  animation: fadeInUp 600ms ease forwards;
+  opacity: 0;
+}
+
+.specialty-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--blue);
+}
+
+.specialty-icon {
+  display: none; /* removed decorative emoji/icon */
+}
+
+.specialty-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: var(--space-sm);
+}
+
+.specialty-card p {
+  font-size: 0.95rem;
+  color: var(--grey);
+  line-height: 1.6;
+}
+
+/* Community Involvement */
+.community-section {
+  margin: var(--space-xl) 0;
+}
+
+.community-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  margin-bottom: var(--space-lg);
+  color: var(--ink);
+}
+
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.community-item {
+  background: linear-gradient(135deg, var(--green-light), var(--muted));
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem; /* ensure text does not touch borders */
+  position: relative; /* for status pill placement */
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.community-item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  border-color: var(--green);
+}
+
+.community-item h4 {
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: var(--space-sm);
+}
+
+.community-item p {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  margin-bottom: var(--space-sm);
+  line-height: 1.6;
+}
+
+.community-item small {
+  display: none; /* replaced by the pill-style status */
+}
+
+/* Status pill for community cards */
+.status-pill {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255,255,255,0.9);
+  color: var(--green-dark);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Profile CTA Section */
+.profile-cta {
+  margin: var(--space-xl) 0;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+  color: var(--white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-blue);
+}
+
+.profile-cta-content {
+  padding: 4rem var(--space-lg); /* generous vertical padding for balanced CTA */
+  text-align: center;
+}
+
+.profile-cta-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: var(--white);
+  margin-bottom: var(--space-md);
+}
+
+.profile-cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-lg);
+  opacity: 0.95;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 200ms ease;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--white);
+  color: var(--blue);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+  background: var(--white);
+  color: var(--blue);
+}
+
+/* Animations */
+.profile-fade-in {
+  animation: fadeIn 600ms ease forwards;
+  opacity: 0;
+}
+
+.profile-slide-up {
+  animation: slideUp 600ms ease forwards;
+  opacity: 0;
+}
+
+.profile-scale {
+  animation: scaleIn 600ms ease forwards;
+  opacity: 0;
+}
+
+.profile-fade-in.in-view,
+.profile-slide-up.in-view,
+.profile-scale.in-view {
+  animation-play-state: running;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    padding: var(--space-md);
+  }
+
+  .profile-hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .profile-quick-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .credentials-grid,
+  .specialties-grid,
+  .community-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .profile-cta-content {
+    padding: var(--space-lg);
+  }
+
+  .profile-cta-content h2 {
+    font-size: 1.5rem;
+  }
+}

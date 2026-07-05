@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Virtual Physio | Book Online Physiotherapy</title>
+  <meta name="description" content="Contact Virtual Physio to book virtual physiotherapy, in-home treatment in Ottawa, home clinic room care, pelvic floor care, pain management or rehab.">
+  <meta name="theme-color" content="#0077B6">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://virtualphysio.ca/contact">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact Virtual Physio">
+  <meta property="og:description" content="Book online physiotherapy by form, call or WhatsApp.">
+  <meta property="og:url" content="https://virtualphysio.ca/contact">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto+Condensed:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Virtual Physio",
+    "url": "https://virtualphysio.ca/contact",
+    "mainEntity": {
+      "@type": "MedicalBusiness",
+      "name": "Virtual Physio",
+      "telephone": "+13432024226",
+      "email": "info@virtualphysio.ca",
+      "areaServed": ["Ottawa"],
+      "openingHours": "Mo-Sa 09:00-19:00"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="/"><img src="Logo.png" alt="Virtual Physio virtual physiotherapy clinic logo" width="220" height="72"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Open navigation"><span></span><span></span><span></span></button>
+      <ul id="primary-menu" class="nav-menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact" aria-current="page">Contact</a></li>
+      </ul>
+      <a class="nav-cta" href="/booking?service=Free%2015-Min%20Consultation" data-track="book_appointment_nav">Book Free 15-Min Consultation</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container narrow reveal">
+        <span class="eyebrow">Contact and booking</span>
+        <h1>Contact Virtual Physio for online physiotherapy booking.</h1>
+        <p>Send your preferred service, date and message. Virtual Physio can follow up by phone, email or WhatsApp. In-home treatment in Ottawa, home clinic room care and person-to-person appointments are available by request.</p>
+      </div>
+    </section>
+
+    <section id="booking" class="section" aria-labelledby="booking-title">
+      <div class="container contact-grid">
+        <form class="booking-form reveal" name="appointment-request" method="POST" action="/contact" data-netlify="true" netlify-honeypot="bot-field" aria-describedby="form-help">
+          <input type="hidden" name="form-name" value="appointment-request">
+          <p class="sr-only">
+            <label>Don't fill this out if you're human: <input name="bot-field"></label>
+          </p>
+          <span class="eyebrow">Appointment form</span>
+          <h2 id="booking-title">Book an appointment</h2>
+          <p id="form-help">Required fields are marked with an asterisk. For fastest booking, use the dedicated booking page.</p>
+          <div class="form-row">
+            <label for="name">Full name *</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="form-row">
+            <label for="phone">Phone number *</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email">
+          </div>
+          <div class="form-row">
+            <label for="service">Service</label>
+            <select id="service" name="service">
+              <option>Physiotherapy</option>
+              <option>Physiotherapy Subsequent Treatment</option>
+              <option>Physiotherapy Extended Treatment</option>
+              <option>In-Home Treatment</option>
+              <option>Pelvic Floor Physiotherapy</option>
+              <option>Pelvic Floor Treatment</option>
+              <option>Free 15-Min Consultation</option>
+              <option>Post-Surgery Rehab</option>
+              <option>Sports Injury Care</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="date">Preferred date</label>
+            <input id="date" name="date" type="date">
+          </div>
+          <div class="form-row">
+            <label for="time">Preferred time</label>
+            <input id="time" name="time" type="time">
+          </div>
+          <div class="form-row">
+            <label for="message">Tell us what you need</label>
+            <textarea id="message" name="message" rows="5" placeholder="Example: lower back pain for two weeks, morning appointments preferred"></textarea>
+          </div>
+          <div class="button-row">
+            <button class="btn btn-primary" type="submit">Send Appointment Request</button>
+            <a class="btn btn-secondary" href="/booking?service=Free%2015-Min%20Consultation" data-track="booking_page_from_contact">Book Free 15-Min Consultation</a>
+          </div>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <aside class="contact-panel reveal delay-1" aria-label="Physiotherapy care contact details">
+          <h2>Care details</h2>
+          <p><strong>Phone:</strong> <a href="tel:+13432024226" data-track="call_contact">+1 (343) 202-4226</a></p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/13432024226" data-track="whatsapp_contact">Message Virtual Physio</a></p>
+          <p><strong>Email:</strong> <a href="mailto:info@virtualphysio.ca">info@virtualphysio.ca</a></p>
+          <p><strong>Hours:</strong> Monday-Saturday, 9:00 AM-7:00 PM</p>
+          <p><strong>Service area:</strong> Virtual care across Ottawa, in-home treatment in Ottawa, home clinic room care and person-to-person appointments by request</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="brand footer-brand" href="/"><img src="Logo.png" alt="Virtual Physio virtual physiotherapy clinic logo" width="220" height="72" loading="lazy"></a><p>Virtual and in-home physiotherapy care for pain relief, rehabilitation and confident movement.</p></div>
+      <div><h2>Contact</h2><p><a href="tel:+13432024226">+1 (343) 202-4226</a></p><p><a href="mailto:info@virtualphysio.ca">info@virtualphysio.ca</a></p></div>
+      <div><h2>Care Options</h2><p>Virtual care across Ottawa</p><p>In-home treatment in Ottawa by request</p><p>Home clinic room and person-to-person care</p><p>Mon-Sat, 9:00 AM-7:00 PM</p></div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

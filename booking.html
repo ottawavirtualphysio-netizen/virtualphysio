@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book Online Physiotherapy Appointment | Virtual Physio.ca</title>
-  <meta name="description" content="Book virtual physiotherapy, in-home treatment in Ottawa, home clinic room care, pelvic floor care, pain relief or rehab with Virtual Physio.ca.">
+  <title>Book Online Physiotherapy Appointment | Virtual Physio</title>
+  <meta name="description" content="Book virtual physiotherapy, in-home treatment in Ottawa, home clinic room care, pelvic floor care, pain relief or rehab with Virtual Physio.">
   <meta name="keywords" content="book physiotherapy Ottawa, virtual physiotherapy Ottawa, in home treatment in Ottawa, home physiotherapy Ottawa, pelvic floor physiotherapy booking">
   <meta name="theme-color" content="#0077B6">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -21,10 +21,10 @@
   {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
-    "name": "Virtual Physio.ca",
+    "name": "Virtual Physio",
     "url": "https://virtualphysio.ca/booking",
     "medicalSpecialty": "Physiotherapy",
-    "telephone": "+13432040699",
+    "telephone": "+13432024226",
     "email": "info@virtualphysio.ca",
     "areaServed": ["Ottawa"],
     "potentialAction": {
@@ -38,7 +38,7 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <nav class="navbar container" aria-label="Main navigation">
-      <a class="brand" href="/"><img src="Logo.png" alt="Virtual Physio.ca virtual physiotherapy clinic logo" width="220" height="72"></a>
+      <a class="brand" href="/"><img src="Logo.png" alt="Virtual Physio virtual physiotherapy clinic logo" width="220" height="72"></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Open navigation"><span></span><span></span><span></span></button>
       <ul id="primary-menu" class="nav-menu">
         <li><a href="/">Home</a></li>
@@ -47,7 +47,7 @@
         <li><a href="/blog">Blog</a></li>
         <li><a href="/contact">Contact</a></li>
       </ul>
-      <a class="nav-cta" href="/booking" aria-current="page" data-track="book_appointment_nav">Book Appointment</a>
+      <a class="nav-cta" href="/booking?service=Free%2015-Min%20Consultation" aria-current="page" data-track="book_appointment_nav">Book Appointment</a>
     </nav>
   </header>
 
@@ -69,7 +69,7 @@
           </p>
           <span class="eyebrow">Secure booking form</span>
           <h2 id="booking-title">Book an appointment</h2>
-          <p id="form-help">Required fields are marked with an asterisk. Please enter a phone number with country code, for example +1 343 204 0699.</p>
+          <p id="form-help">Required fields are marked with an asterisk. Please enter a phone number with country code, for example +1 (343) 202-4226.</p>
 
           <div class="form-grid">
             <div class="form-row with-icon">
@@ -84,7 +84,7 @@
               <label for="phone">Phone Number *</label>
               <div class="input-wrap">
                 <span class="field-icon" aria-hidden="true">&#128222;</span>
-                <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+1 343 204 0699" required>
+                <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+1 (343) 202-4226" required>
               </div>
               <small class="field-error" aria-live="polite"></small>
             </div>
@@ -96,17 +96,55 @@
               </div>
               <small class="field-error" aria-live="polite"></small>
             </div>
-            <div class="form-row with-icon">
-              <label for="service">Service Selection *</label>
-              <div class="input-wrap">
+            <div class="form-row form-row--full">
+              <fieldset class="service-picker" id="service-picker">
+                <legend>Service Selection *</legend>
+                <div class="service-picker-grid" role="group" aria-label="Choose a physiotherapy service">
+                  <button type="button" class="service-picker-card service-picker-card--featured" data-service="Free 15-Min Consultation">
+                    <span class="service-picker-name">Free 15-Min Consultation</span>
+                    <span class="service-picker-price">Free</span>
+                  </button>
+                  <button type="button" class="service-picker-card" data-service="Physiotherapy">
+                    <span class="service-picker-name">Physiotherapy</span>
+                    <span class="service-picker-price">Assessment</span>
+                  </button>
+                  <button type="button" class="service-picker-card" data-service="Physiotherapy Subsequent Treatment">
+                    <span class="service-picker-name">Physiotherapy Subsequent Treatment</span>
+                    <span class="service-picker-price">Follow-up</span>
+                  </button>
+                  <button type="button" class="service-picker-card" data-service="Physiotherapy Extended Treatment">
+                    <span class="service-picker-name">Physiotherapy Extended Treatment</span>
+                    <span class="service-picker-price">Extended session</span>
+                  </button>
+                  <button type="button" class="service-picker-card" data-service="In-Home Treatment">
+                    <span class="service-picker-name">In-Home Treatment</span>
+                    <span class="service-picker-price">In-home visit</span>
+                  </button>
+                  <button type="button" class="service-picker-card" data-service="Pelvic Floor Treatment">
+                    <span class="service-picker-name">Pelvic Floor Treatment</span>
+                    <span class="service-picker-price">Specialized care</span>
+                  </button>
+                  <button type="button" class="service-picker-card" data-service="Post-Surgery Rehab">
+                    <span class="service-picker-name">Post-Surgery Rehab</span>
+                    <span class="service-picker-price">Rehabilitation</span>
+                  </button>
+                  <button type="button" class="service-picker-card" data-service="Sports Injury Care">
+                    <span class="service-picker-name">Sports Injury Care</span>
+                    <span class="service-picker-price">Return to sport</span>
+                  </button>
+                </div>
+              </fieldset>
+              <label for="service" class="sr-only">Service Selection</label>
+              <div class="input-wrap service-select-fallback">
                 <span class="field-icon" aria-hidden="true">&#9877;</span>
                 <select id="service" name="service" required>
                   <option value="">Select a service</option>
+                  <option>Free 15-Min Consultation</option>
                   <option>Physiotherapy</option>
                   <option>Physiotherapy Subsequent Treatment</option>
                   <option>Physiotherapy Extended Treatment</option>
                   <option>In-Home Treatment</option>
-                  <option>Pelvic Floor Physiotherapy</option>
+                  <option>Pelvic Floor Treatment</option>
                   <option>Post-Surgery Rehab</option>
                   <option>Sports Injury Care</option>
                 </select>
@@ -143,6 +181,15 @@
             </div>
           </fieldset>
 
+          <div class="form-row with-icon form-row--compact">
+            <label for="insurance">Do you have insurance? If yes, which one? *</label>
+            <div class="input-wrap">
+              <span class="field-icon" aria-hidden="true">&#128737;</span>
+              <input id="insurance" name="insurance" type="text" autocomplete="off" required placeholder="e.g. Sun Life, Blue Cross, or N/A">
+            </div>
+            <small class="field-error" aria-live="polite"></small>
+          </div>
+
           <div class="form-row">
             <label for="message">Describe your problem or symptoms</label>
             <textarea id="message" name="message" rows="5" placeholder="Please briefly explain the pain, discomfort, or issue you are experiencing (e.g., how long you’ve had it, severity, and any previous treatment)."></textarea>
@@ -151,16 +198,16 @@
 
           <div class="booking-actions">
             <button class="btn btn-primary" type="submit">Book Appointment Now</button>
-            <a class="btn btn-secondary whatsapp-quick" href="https://wa.me/13432040699" target="_blank" rel="noopener" data-track="whatsapp_booking">WhatsApp Quick Contact</a>
+            <a class="btn btn-secondary whatsapp-quick" href="https://wa.me/13432024226" target="_blank" rel="noopener" data-track="whatsapp_booking">WhatsApp Quick Contact</a>
           </div>
 
-          <p class="trust-note">&#128274; Your information is 100% secure</p>
+          <p class="trust-note">&#128274; Your information is secure</p>
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
 
         <aside class="contact-panel reveal delay-1" aria-label="Booking help and service icons">
           <h2>Care support</h2>
-          <p><strong>Phone:</strong> <a href="tel:+13432040699" data-track="call_booking">+1 343 204 0699</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+13432024226" data-track="call_booking">+1 (343) 202-4226</a></p>
           <p><strong>Email:</strong> <a href="mailto:info@virtualphysio.ca">info@virtualphysio.ca</a></p>
           <p><strong>Hours:</strong> Monday-Saturday, 9:00 AM-7:00 PM</p>
           <div class="health-icon-row" aria-hidden="true">
@@ -169,7 +216,7 @@
             <span class="medical-icon">&#9855;</span>
           </div>
           <p><strong>Service area:</strong> Virtual care across Ottawa, in-home treatment in Ottawa, home clinic room care and person-to-person appointments</p>
-          <p class="booking-note">This booking form is integrated with Netlify Forms for secure submission and fast follow-up.</p>
+         
         </aside>
       </div>
     </section>
@@ -177,27 +224,12 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div><a class="brand footer-brand" href="/"><img src="Logo.png" alt="Virtual Physio.ca virtual physiotherapy clinic logo" width="220" height="72" loading="lazy"></a><p>Virtual and in-home physiotherapy care for pain relief, rehabilitation and confident movement.</p></div>
-      <div><h2>Contact</h2><p><a href="tel:+13432040699">+1 343 204 0699</a></p><p><a href="mailto:info@virtualphysio.ca">info@virtualphysio.ca</a></p></div>
+      <div><a class="brand footer-brand" href="/"><img src="Logo.png" alt="Virtual Physio virtual physiotherapy clinic logo" width="220" height="72" loading="lazy"></a><p>Virtual and in-home physiotherapy care for pain relief, rehabilitation and confident movement.</p></div>
+      <div><h2>Contact</h2><p><a href="tel:+13432024226">+1 (343) 202-4226</a></p><p><a href="mailto:info@virtualphysio.ca">info@virtualphysio.ca</a></p></div>
       <div><h2>Care Options</h2><p>Virtual care across Ottawa</p><p>In-home treatment in Ottawa by request</p><p>Home clinic room and person-to-person care</p><p>Mon-Sat, 9:00 AM-7:00 PM</p></div>
     </div>
   </footer>
 
-  <section class="chatbot" aria-label="Patient support assistant">
-    <div class="fab-stack" aria-label="Floating actions">
-      <a class="whatsapp-fab" href="https://wa.me/13432040699" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" data-track="whatsapp_fab">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 2C6.48 2 2 6.48 2 12c0 1.76.46 3.48 1.34 5L2 22l5.18-1.31A9.96 9.96 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Zm0 18c-1.53 0-3.02-.41-4.33-1.19l-.31-.18-3.07.78.82-2.99-.2-.31A7.96 7.96 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8Zm4.39-5.53c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.27.18-.51.06-.24-.12-1-.37-1.9-1.17-.7-.62-1.17-1.39-1.31-1.63-.14-.24-.01-.36.11-.48.11-.11.24-.27.36-.41.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.29-.74-1.76-.19-.46-.39-.39-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.33.98 2.49c.12.16 1.68 2.57 4.08 3.6.57.24 1.02.39 1.37.5.58.19 1.1.16 1.52.1.46-.07 1.43-.58 1.63-1.14.2-.56.2-1.04.14-1.14-.05-.1-.21-.16-.45-.28Z"/>
-        </svg>
-      </a>
-      <button class="chat-toggle" type="button" aria-expanded="false" aria-controls="chat-panel">AI Assistant</button>
-    </div>
-    <div id="chat-panel" class="chat-panel" hidden>
-      <div class="chat-header"><strong>Virtual Physio.ca Assistant</strong><button type="button" class="chat-close" aria-label="Close chat">x</button></div>
-      <div class="chat-log" aria-live="polite"></div>
-      <form class="chat-form"><label class="sr-only" for="chat-input">Ask a patient support question</label><input id="chat-input" name="message" type="text" placeholder="Ask about pain, services, or booking" autocomplete="off"><button type="submit">Send</button></form>
-    </div>
-  </section>
   <script src="script.js" defer></script>
 </body>
 </html>

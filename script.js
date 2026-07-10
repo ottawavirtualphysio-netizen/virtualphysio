@@ -1,5 +1,5 @@
 /* ============================================================
-   Virtual Physio.ca — Premium JS Upgrade
+   Virtual Physio — Premium JS Upgrade
    Scroll animations, navbar, 3D tilt, form UX, chat
    ============================================================ */
 
@@ -7,7 +7,6 @@
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".nav-menu");
 const siteHeader = document.querySelector(".site-header");
-const floatingAssistant = document.querySelector(".chatbot");
 
 function trackConversion(eventName, eventParams = {}) {
   if (typeof window.gtag === "function") {
@@ -23,29 +22,6 @@ document.querySelectorAll("[data-track]").forEach((element) => {
     });
   });
 });
-
-function updateFloatingAssistantOffset() {
-  if (!floatingAssistant) return;
-  const footer = document.querySelector(".site-footer");
-  const edgeOffset = window.innerWidth <= 640 ? 16 : 20;
-  let bottomOffset = edgeOffset;
-
-  if (footer) {
-    const footerTop = footer.getBoundingClientRect().top;
-    const viewportHeight = window.innerHeight;
-    if (footerTop < viewportHeight - edgeOffset) {
-      bottomOffset = Math.max(edgeOffset, viewportHeight - footerTop + edgeOffset);
-    }
-  }
-
-  floatingAssistant.style.bottom = `${bottomOffset}px`;
-}
-
-if (floatingAssistant) {
-  window.addEventListener("scroll", updateFloatingAssistantOffset, { passive: true });
-  window.addEventListener("resize", updateFloatingAssistantOffset);
-  updateFloatingAssistantOffset();
-}
 
 if (navToggle && navMenu) {
   const closeNavMenu = () => {
@@ -190,6 +166,7 @@ if (bookingForm) {
   const emailInput = bookingForm.querySelector('input[name="email"]');
   const nameInput = bookingForm.querySelector('input[name="name"]');
   const serviceInput = bookingForm.querySelector('select[name="service"]');
+  const insuranceInput = bookingForm.querySelector('input[name="insurance"]');
   const formAction = bookingForm.getAttribute("action") || window.location.pathname || "/";
   const netlifyEndpoint = formAction.startsWith("http") || window.location.origin === "null"
     ? formAction
@@ -247,10 +224,41 @@ if (bookingForm) {
     });
   }
 
-  [nameInput, emailInput, serviceInput].forEach((field) => {
+  [nameInput, emailInput, serviceInput, insuranceInput].forEach((field) => {
     field?.addEventListener("input", () => setFieldError(field, ""));
     field?.addEventListener("change", () => setFieldError(field, ""));
   });
+
+  const preselectedService = new URLSearchParams(window.location.search).get("service");
+  const servicePicker = bookingForm.querySelector(".service-picker");
+  const servicePickerCards = bookingForm.querySelectorAll(".service-picker-card");
+
+  const setSelectedService = (serviceName) => {
+    if (!serviceName || !serviceInput) return;
+    const match = Array.from(serviceInput.options).find(
+      (option) => option.value === serviceName || option.textContent === serviceName
+    );
+    if (!match) return;
+    serviceInput.value = match.value;
+    servicePickerCards.forEach((card) => {
+      card.classList.toggle("is-selected", card.dataset.service === match.value);
+    });
+    setFieldError(serviceInput, "");
+  };
+
+  servicePickerCards.forEach((card) => {
+    card.addEventListener("click", () => {
+      setSelectedService(card.dataset.service || "");
+    });
+  });
+
+  serviceInput?.addEventListener("change", () => {
+    setSelectedService(serviceInput.value);
+  });
+
+  if (preselectedService) {
+    setSelectedService(preselectedService);
+  }
 
   bookingForm.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -294,6 +302,11 @@ if (bookingForm) {
         firstInvalidField = firstInvalidField || serviceInput;
       }
 
+      if (!String(insuranceInput?.value || "").trim()) {
+        setFieldError(insuranceInput, "Please tell us your insurance provider or enter N/A.");
+        firstInvalidField = firstInvalidField || insuranceInput;
+      }
+
       if (firstInvalidField) {
         if (status) status.textContent = "Please fix the highlighted fields and try again.";
         firstInvalidField.focus();
@@ -309,6 +322,7 @@ if (bookingForm) {
         date: String(submitData.get("date") || ""),
         time: String(submitData.get("time") || ""),
         problemArea: submitData.getAll("problemArea").join(", "),
+        insurance: String(submitData.get("insurance") || ""),
         message: String(submitData.get("message") || ""),
         source: window.location.pathname,
         submittedAt: new Date().toISOString()
@@ -352,26 +366,6 @@ if (bookingForm) {
         submitButton.textContent = "✓ Request Sent Successfully";
       }
 
-      if (chatPanel && chatToggle) {
-        chatPanel.removeAttribute("hidden");
-        chatToggle.setAttribute("aria-expanded", "true");
-      }
-
-      addChatMessage("Appointment request submitted.", "user");
-      addChatMessage(
-        [
-          "Your request details:",
-          `Name: ${payload.name}`,
-          `Phone: ${payload.phone}`,
-          `Email: ${payload.email}`,
-          `Service: ${payload.service}`,
-          `Date: ${payload.date}`,
-          `Time: ${payload.time}`,
-          `Problem Area: ${payload.problemArea || "Not specified"}`,
-          `Message: ${payload.message}`
-        ].join("\n")
-      );
-
       bookingForm.reset();
 
       /* Reset label colors */
@@ -390,7 +384,7 @@ if (bookingForm) {
       }
 
       if (status) {
-        status.textContent = "Unable to submit right now. Please use WhatsApp Quick Contact or call +1 343 204 0699.";
+        status.textContent = "Unable to submit right now. Please use WhatsApp Quick Contact or call +1 (343) 202-4226.";
       }
       showToast("Submission failed. Please use WhatsApp or call.", "error");
 
@@ -418,120 +412,8 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-/* ── Chatbot ─────────────────────────────────────────────── */
-const chatToggle = document.querySelector(".chat-toggle");
-const chatPanel = document.querySelector(".chat-panel");
-const chatClose = document.querySelector(".chat-close");
-const chatForm = document.querySelector(".chat-form");
-const chatLog = document.querySelector(".chat-log");
-const chatInput = document.querySelector("#chat-input");
-
-const replies = [
-  {
-    keys: ["book", "appointment", "schedule", "visit"],
-    text: "You can book from the Contact page appointment form. Share your service, preferred date and phone number, and Virtual Physio.ca will confirm by WhatsApp. In-home treatment in Ottawa, home clinic room care and person-to-person appointments are available by request."
-  },
-  {
-    keys: ["pain", "back", "neck", "shoulder", "knee"],
-    text: "For pain, a physiotherapist starts with assessment, movement testing and a plan that may include manual therapy, exercise and posture guidance. Seek urgent care for severe trauma, numbness, chest pain or sudden weakness."
-  },
-  {
-    keys: ["service", "physio", "pelvic", "exercise", "rehab", "home"],
-    text: "Virtual Physio.ca offers physiotherapy assessment, follow-up treatment, extended treatment, in-home treatment in Ottawa, home clinic room care, person-to-person physiotherapy, pelvic floor physiotherapy, post-surgery rehab, pain management and sports injury care."
-  },
-  {
-    keys: ["cost", "price", "fee"],
-    text: "Fees depend on the service and session length. Send Virtual Physio.ca your preferred service and they can confirm availability and pricing."
-  },
-  {
-    keys: ["hours", "open", "time"],
-    text: "Virtual appointments are available Monday to Saturday, 9:00 AM to 7:00 PM."
-  },
-  {
-    keys: ["location", "online", "virtual", "address"],
-    text: "Virtual appointments are available across Ottawa, and in-home treatment in Ottawa is available by request. The Contact page has direct phone, WhatsApp and email links."
-  }
-];
-
-function addChatMessage(text, type = "assistant") {
-  if (!chatLog) return;
-  const message = document.createElement("div");
-  message.className = `chat-message ${type}`;
-  message.textContent = text;
-  chatLog.appendChild(message);
-  requestAnimationFrame(() => {
-    chatLog.scrollTop = chatLog.scrollHeight;
-  });
-}
-
-function getAssistantReply(input) {
-  const normalized = input.toLowerCase();
-  const match = replies.find((item) =>
-    item.keys.some((key) => normalized.includes(key))
-  );
-  return match
-    ? match.text
-    : "I can help with services, pain questions, virtual care hours and booking. For a personal diagnosis, please book an assessment with a licensed physiotherapist.";
-}
-
-/* Typing indicator */
-function showTypingIndicator() {
-  if (!chatLog) return null;
-  const el = document.createElement("div");
-  el.className = "chat-message assistant typing-indicator";
-  el.textContent = "Typing…";
-  el.style.opacity = "0.6";
-  el.style.fontStyle = "italic";
-  chatLog.appendChild(el);
-  chatLog.scrollTop = chatLog.scrollHeight;
-  return el;
-}
-
-if (chatToggle && chatPanel) {
-  chatToggle.addEventListener("click", () => {
-    const willOpen = chatPanel.hasAttribute("hidden");
-    if (willOpen) {
-      chatPanel.removeAttribute("hidden");
-      chatToggle.setAttribute("aria-expanded", "true");
-      if (chatLog && !chatLog.children.length) {
-        addChatMessage(
-          "Hello. I can answer common physiotherapy questions and guide you to booking."
-        );
-      }
-      setTimeout(() => chatInput?.focus(), 80);
-    } else {
-      chatPanel.setAttribute("hidden", "");
-      chatToggle.setAttribute("aria-expanded", "false");
-    }
-  });
-}
-
-if (chatClose && chatPanel && chatToggle) {
-  chatClose.addEventListener("click", () => {
-    chatPanel.setAttribute("hidden", "");
-    chatToggle.setAttribute("aria-expanded", "false");
-    chatToggle.focus();
-  });
-}
-
-if (chatForm) {
-  chatForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const value = chatInput.value.trim();
-    if (!value) return;
-    addChatMessage(value, "user");
-    chatInput.value = "";
-
-    const indicator = showTypingIndicator();
-    setTimeout(() => {
-      indicator?.remove();
-      addChatMessage(getAssistantReply(value));
-    }, 520 + Math.random() * 280);
-  });
-}
-
 /* ── Hero image parallax (subtle) ───────────────────────── */
-const heroVisual = document.querySelector(".hero-visual");
+const heroVisual = document.querySelector(".hero-visual, .hero-collage");
 if (heroVisual && !isMobile()) {
   window.addEventListener(
     "scroll",

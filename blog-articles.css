@@ -285,24 +285,20 @@
 
 /* Blog card interactivity */
 .blog-card {
-  transition: all 200ms ease;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
-.blog-card[data-article-slug] {
-  cursor: pointer;
-}
-
-.blog-card[data-article-slug]:hover {
+.blog-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
 
-.blog-card[data-article-slug] a[data-slot="read-button"] {
-  opacity: 0.8;
-  transition: opacity 200ms ease;
+.blog-card .btn-read-more {
+  transition: background var(--transition), transform var(--transition), border-color var(--transition);
 }
 
-.blog-card[data-article-slug]:hover a[data-slot="read-button"] {
-  opacity: 1;
-  color: var(--blue);
+@media (max-width: 768px) {
+  .blog-card:hover {
+    transform: translateY(-2px);
+  }
 }

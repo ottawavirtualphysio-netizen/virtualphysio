@@ -26,6 +26,7 @@ function doPost(e) {
       payload.date || "",
       payload.time || "",
       payload.problemArea || "",
+      payload.insurance || "",
       payload.message || "",
       payload.source || ""
     ]);

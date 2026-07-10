@@ -12,7 +12,7 @@ const SERVICE_ROUTES = [
   {
     path: "/services/in-home-ottawa",
     title: "In-Home Physiotherapy in Ottawa",
-    description: "Virtual Physio.ca brings physiotherapy directly to your home across Ottawa",
+    description: "Virtual Physio brings physiotherapy directly to your home across Ottawa",
     category: "location",
     featured: true
   },
@@ -116,7 +116,7 @@ const CASE_STUDIES = [
       confidence: "Returned to independent grocery shopping and social activities",
       timeline: "12 weeks of bi-weekly in-home sessions"
     },
-    testimonial: "I feel confident walking again. Virtual Physio.ca gave me my independence back.",
+    testimonial: "I feel confident walking again. Virtual Physio gave me my independence back.",
     patientName: "Margaret, 76"
   },
   {

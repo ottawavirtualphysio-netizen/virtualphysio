@@ -55,24 +55,6 @@ const THERAPIST_PROFILE = {
       icon: "🧘"
     }
   ],
-
-  communityInvolvement: [
-    {
-      title: "Women's Health Education Series",
-      description: "Monthly virtual seminars on pelvic floor health for local wellness studios.",
-      date: "Ongoing"
-    },
-    {
-      title: "Post-Partum Recovery Workshop",
-      description: "Partner with local midwifery practices for core recovery education.",
-      date: "Quarterly"
-    },
-    {
-      title: "Sports Injury Prevention Talks",
-      description: "Workshops for local sports teams and athletic organizations.",
-      date: "Seasonal"
-    }
-  ]
 };
 
 /**
@@ -221,7 +203,7 @@ function renderProfileCTA(containerId = ".profile-cta") {
       <p>Schedule a free 15-minute consultation to discuss your goals and get started.</p>
       <div class="cta-buttons">
         <a href="/booking" class="btn btn-primary">Book Appointment</a>
-        <a href="tel:+13432040699" class="btn btn-secondary">Call: +1 343 204 0699</a>
+        <a href="tel:+13432024226" class="btn btn-secondary">Call: +1 (343) 202-4226</a>
       </div>
     </div>
   `;

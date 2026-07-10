@@ -21,7 +21,7 @@ const BLOG_ARTICLES = [
 <div class="prose-article">
   <h2>What Is In-Home Physiotherapy?</h2>
   <p>In-home physiotherapy is an evidence-based treatment approach delivered directly at a patient's residence, rather than in a clinic. This service is designed for individuals who face barriers to attending appointments—whether due to mobility limitations, transportation challenges, chronic pain, recovery from surgery, or simply preference for receiving care in their familiar environment.</p>
-  <p>At Virtual Physio.ca, we bring our full therapeutic toolkit to your home: assessment, exercise prescription, postural correction, manual therapy, education and ongoing progress monitoring. The treatment plan is tailored to your specific needs, living space and recovery goals.</p>
+  <p>At Virtual Physio, we bring our full therapeutic toolkit to your home: assessment, exercise prescription, postural correction, manual therapy, education and ongoing progress monitoring. The treatment plan is tailored to your specific needs, living space and recovery goals.</p>
 
   <h2>Who Can Benefit Most from In-Home Physiotherapy?</h2>
   <p>In-home physiotherapy is particularly effective for:</p>
@@ -79,17 +79,17 @@ const BLOG_ARTICLES = [
   <p>Most patients start with 2-3 visits per week for 2-4 weeks, then transition to weekly visits as they progress. Treatment length varies by condition—acute post-surgical cases may require 4-8 weeks of intensive support, while chronic pain management might involve ongoing monthly maintenance visits. We'll adjust frequency based on your progress and functional goals.</p>
 
   <h2>Cost and Coverage</h2>
-  <p>In-home physiotherapy is often covered by private health insurance plans and extended health benefits. Some plans may have specific requirements or limits. We recommend verifying your coverage before your first appointment. At Virtual Physio.ca, we provide detailed invoicing to support insurance claims.</p>
+  <p>In-home physiotherapy is often covered by private health insurance plans and extended health benefits. Some plans may have specific requirements or limits. We recommend verifying your coverage before your first appointment. At Virtual Physio, we provide detailed invoicing to support insurance claims.</p>
 
   <h2>Is Virtual Physiotherapy an Alternative?</h2>
   <p>For some patients, virtual physiotherapy is an excellent option—particularly for ongoing exercise coaching, check-ins and follow-up support. However, virtual care requires you to be able to move safely independently and have appropriate home space. In-home in-person treatment is better for initial hands-on assessment, manual therapy and detailed movement correction in your actual environment.</p>
 
   <h2>Getting Started with In-Home Physiotherapy in Ottawa</h2>
-  <p>Ready to explore whether in-home physiotherapy is right for you? Contact Virtual Physio.ca to schedule your initial consultation. We'll discuss your specific situation, answer your questions and create a plan that fits your recovery goals and lifestyle.</p>
+  <p>Ready to explore whether in-home physiotherapy is right for you? Contact Virtual Physio to schedule your initial consultation. We'll discuss your specific situation, answer your questions and create a plan that fits your recovery goals and lifestyle.</p>
 
   <div class="article-cta">
     <p><strong>Have questions about in-home physiotherapy?</strong></p>
-    <p>Call us at +1 343 204 0699 or book a free 15-minute consultation.</p>
+    <p>Call us at +1 (343) 202-4226 or book a free 15-minute consultation.</p>
     <a href="/booking" class="cta-button">Schedule Your Assessment</a>
   </div>
 </div>

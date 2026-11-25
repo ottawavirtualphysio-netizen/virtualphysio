@@ -12,7 +12,10 @@ EMAIL = "info@virtualphysio.ca"
 WHATSAPP = "https://wa.me/13432024226"
 HOURS = "Mon–Sat, 9:00 AM–7:00 PM"
 OG_IMAGE = f"{SITE}/img/og-virtual-physio.jpg"
-CSS_VERSION = "20261125"
+import hashlib as _h, os as _os
+_ROOT = _os.path.abspath(_os.path.join(_os.path.dirname(__file__), "..", ".."))
+# Version = hash of the CSS/JS files, so browsers always fetch the newest copy after a change.
+CSS_VERSION = _h.md5(b"".join(open(_os.path.join(_ROOT, f), "rb").read() for f in ("style.css", "refresh.css", "script.js"))).hexdigest()[:10]
 
 AREAS = [
     "Ottawa", "Kanata", "Stittsville", "Barrhaven", "Nepean", "Orléans", "Gloucester",

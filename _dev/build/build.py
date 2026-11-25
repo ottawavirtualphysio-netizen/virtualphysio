@@ -685,7 +685,8 @@ def build_booking():
               </div>
               <div class="form-row">
                 <label for="phone">Phone <span class="req">*</span></label>
-                <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="343 202 4226" required>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="20" placeholder="(343) 202-4226" required>
+                <small class="hint">Canadian numbers: just the 10 digits. Outside Canada/US: start with + and country code.</small>
                 <small class="field-error" aria-live="polite"></small>
               </div>
               <div class="form-row">

@@ -137,7 +137,27 @@
   });
   form.addEventListener("input", function (e) { if (e.target.name) setError(e.target, ""); });
   var phoneInput = form.querySelector('input[name="phone"]');
-  if (phoneInput) phoneInput.addEventListener("blur", function () { phoneInput.value = prettyPhone(phoneInput.value); });
+  // Format Canadian/US numbers as the user types: (343) 202-4226. International (+...) numbers are left as typed.
+  function liveFormat(v) {
+    if (/^\s*\+/.test(v) && !/^\s*\+1/.test(v)) return v;
+    var d = v.replace(/\D/g, "");
+    if (d.length === 11 && d.charAt(0) === "1") d = d.slice(1);
+    if (d.length > 10) return v;
+    if (d.length < 4) return d;
+    if (d.length < 7) return "(" + d.slice(0, 3) + ") " + d.slice(3);
+    return "(" + d.slice(0, 3) + ") " + d.slice(3, 6) + "-" + d.slice(6);
+  }
+  if (phoneInput) {
+    phoneInput.addEventListener("input", function (e) {
+      if (e.inputType && e.inputType.indexOf("delete") === 0) return; // don't fight backspace
+      var atEnd = phoneInput.selectionStart === phoneInput.value.length;
+      if (atEnd) phoneInput.value = liveFormat(phoneInput.value);
+    });
+    phoneInput.addEventListener("blur", function () {
+      var v = phoneInput.value;
+      phoneInput.value = /^\s*\+(?!1)/.test(v) ? v.trim() : liveFormat(v);
+    });
+  }
   updateConditional();
 
   function validate() {

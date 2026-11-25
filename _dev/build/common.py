@@ -160,7 +160,6 @@ BUSINESS = {
     "image": OG_IMAGE,
     "logo": f"{SITE}/img/logo.png",
     "medicalSpecialty": "Physiotherapy",
-    "priceRange": "$$",
     "address": {"@type": "PostalAddress", "addressLocality": "Ottawa", "addressRegion": "ON", "addressCountry": "CA"},
     "areaServed": [{"@type": "City", "name": a} for a in ["Ottawa", "Kanata", "Barrhaven", "Nepean", "Orléans", "Stittsville", "Gloucester", "Manotick"]],
     "openingHoursSpecification": [{

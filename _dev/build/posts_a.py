@@ -172,13 +172,13 @@ POSTS_A = [
 </ul>
 
 <h2 id="tip-1">1. Warm up with movement, not just stretching</h2>
-<p>A good warm-up raises your heart rate, moves joints through the range your sport needs and gets you ready for speed. Spend 8 to 10 minutes on light jogging, skipping or cycling, then dynamic movements like leg swings, lunges with a twist and arm circles, then a few short accelerations. Structured warm-up programs, such as FIFA 11+ for soccer, have been shown to reduce injuries in team sports.</p>
+<p>A good warm-up raises your heart rate, moves joints through the range your sport needs and gets you ready for speed. Spend 8 to 10 minutes on light jogging, skipping or cycling, then dynamic movements like leg swings, lunges with a twist and arm circles, then a few short accelerations. In research reviews, structured warm-up programs such as FIFA 11+ have been linked to fewer injuries in soccer players (see references).</p>
 
 <h2 id="tip-2">2. Build up gradually</h2>
 <p>Many injuries happen when activity jumps suddenly: the first long run of spring, a tournament weekend, or going from no hockey to three games a week. Increase training time or distance gradually, and plan a lighter week every few weeks.</p>
 
 <h2 id="tip-3">3. Strength train twice a week</h2>
-<p>Strong muscles and tendons tolerate load better. Two short sessions a week focused on the legs, hips, core and shoulders can lower your injury risk. Good basics include:</p>
+<p>Strong muscles and tendons tolerate load better, which is why strength work is a common part of injury-prevention programs. Two short sessions a week focused on the legs, hips, core and shoulders is a practical place to start. Good basics include:</p>
 <ul>
   <li>Squats or sit-to-stands</li>
   <li>Split squats or lunges</li>
@@ -189,10 +189,10 @@ POSTS_A = [
 </ul>
 
 <h2 id="tip-4">4. Train your balance and landing</h2>
-<p>Balance and landing drills are especially important if you've sprained an ankle before, since a previous sprain is one of the strongest risk factors for another. Practice standing on one leg, then add reaching, catching or eyes-closed work. Practice landing softly from small hops with knees tracking over your toes.</p>
+<p>Balance and landing drills are especially important if you've sprained an ankle before, since a previous sprain raises the chance of spraining it again. Practice standing on one leg, then add reaching, catching or eyes-closed work. Practice landing softly from small hops with knees tracking over your toes.</p>
 
 <h2 id="tip-5">5. Respect recovery</h2>
-<p>Sleep, food and rest days are when your body adapts to training. Being consistently short on sleep is linked to a higher injury risk in athletes. Plan at least one or two rest or easy days a week.</p>
+<p>Sleep, food and rest days are when your body adapts to training. Plan at least one or two rest or easy days a week.</p>
 
 <h2 id="tip-6">6. Check your equipment</h2>
 <p>Replace running shoes when the cushioning is worn out. Make sure skates, helmets and racquets fit properly. For racquet sports, grip size and string tension can affect elbow pain.</p>
@@ -212,5 +212,6 @@ POSTS_A = [
  ("How soon can I return to sport after a sprain?", "It depends on how severe it is. Mild ankle sprains may take 1 to 3 weeks, and more severe sprains can take 6 weeks or longer. Returning based on strength and balance tests lowers the risk of re-injury."),
 ],
 "related": ["when-to-see-physiotherapist", "lower-back-pain-at-home", "post-surgery-rehabilitation-timeline"],
+"refs": [("Thorborg K et al. Effect of specific exercise-based football injury prevention programmes on the overall injury rate in football: a systematic review and meta-analysis of the FIFA 11 and 11+ programmes. Br J Sports Med. 2017.", "https://pubmed.ncbi.nlm.nih.gov/28087568/")],
 },
 ]

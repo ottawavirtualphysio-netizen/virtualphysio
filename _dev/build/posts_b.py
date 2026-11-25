@@ -32,7 +32,7 @@ POSTS_B = [
   <li><strong>Neck rotations.</strong> Slowly turn to look over one shoulder, then the other. Repeat 5 times each side.</li>
   <li><strong>Doorway chest stretch.</strong> Forearms on a door frame, step through gently until you feel a stretch across your chest. Hold 20 to 30 seconds.</li>
 </ol>
-<p>Strengthening also matters. Exercises for the deep neck muscles and the muscles around the shoulder blades, such as rows and band pull-aparts, have good evidence for long-term neck pain.</p>
+<p>Strengthening also matters. Exercises for the deep neck muscles and the muscles around the shoulder blades, such as rows and band pull-aparts, are commonly recommended for long-term neck pain.</p>
 
 <h2 id="workstation">Workstation set-up tips</h2>
 <ul>
@@ -54,7 +54,7 @@ POSTS_B = [
 """,
 "faqs": [
  ("Can bad posture cause neck pain?", "Staying in any one posture for a long time can lead to neck pain. Changing position often and staying strong matters more than holding a single perfect posture."),
- ("How long does tech neck take to improve?", "Many people notice improvement within 2 to 6 weeks once they change their habits and do their exercises consistently. Long-standing pain can take longer."),
+ ("How long does tech neck take to improve?", "It varies from person to person. Changing your habits and doing your exercises consistently helps, and long-standing pain can take longer. Your physiotherapist will set expectations after assessing you."),
  ("Is virtual physiotherapy effective for neck pain?", "Yes. Assessment, exercise, education and workstation advice can all be done well over video, and you can show your physiotherapist your actual desk set-up."),
 ],
 "related": ["lower-back-pain-at-home", "virtual-vs-in-person-physiotherapy", "car-accident-physiotherapy-ontario"],
@@ -69,7 +69,7 @@ POSTS_B = [
 "published": "2026-07-10",
 "image": "mat-dumbbells",
 "image_alt": "Exercise mat, light dumbbells and a massage ball set up for a home exercise session",
-"lead": "Bladder leaks, pelvic pain and heaviness are common, but they aren't something you just have to live with. Pelvic floor physiotherapy is a well-established, effective treatment for many of these problems.",
+"lead": "Bladder leaks, pelvic pain and heaviness are common, but they aren't something you just have to live with. Research reviews support pelvic floor muscle training as a first-line treatment for urinary leakage in women (see references).",
 "body": """
 <h2 id="what-is">What is the pelvic floor?</h2>
 <p>The pelvic floor is a group of muscles that form a sling at the base of your pelvis. These muscles support the bladder, bowel and uterus, help control when you pee and poo, contribute to sexual function and work with your deep core muscles and breathing.</p>
@@ -88,7 +88,7 @@ POSTS_B = [
 <p>These problems can affect people of any gender. Men may have pelvic floor issues after prostate surgery or with chronic pelvic pain.</p>
 
 <h2 id="kegels">"Just do Kegels"? Not always</h2>
-<p>Pelvic floor strengthening is very effective for many people with stress leakage. But some people have pelvic floor muscles that are too tense rather than weak, and doing more squeezing can make pain worse. Others squeeze the wrong muscles without realizing it. A proper assessment makes sure you're doing the right exercise, correctly, for your situation.</p>
+<p>Pelvic floor strengthening is a recommended first-line treatment for stress leakage. But some people have pelvic floor muscles that are too tense rather than weak, and doing more squeezing can make pain worse. Others squeeze the wrong muscles without realizing it. A proper assessment makes sure you're doing the right exercise, correctly, for your situation.</p>
 
 <h2 id="appointment">What happens at an appointment?</h2>
 <p>Your first visit starts with a detailed, private conversation about your symptoms, bladder and bowel habits, pregnancies and births, and goals. Your physiotherapist will then explain the assessment options. These may include looking at your posture, breathing, abdominal wall and hips. Some pelvic health physiotherapists also offer an internal assessment of the pelvic floor muscles. In Ontario, only physiotherapists rostered with the College of Physiotherapists of Ontario for this controlled act can perform it, and it's always optional.</p>
@@ -113,11 +113,12 @@ POSTS_B = [
 <div class="notice notice--warn">See your doctor promptly for blood in your urine, unexplained bleeding, a fever with pelvic pain, or sudden loss of bladder or bowel control.</div>
 """,
 "faqs": [
- ("Is leaking after having a baby normal?", "It's common, but it isn't something you have to accept. Pelvic floor physiotherapy is a recommended first-line treatment for stress urinary incontinence."),
+ ("Is leaking after having a baby normal?", "It's common, but it isn't something you have to accept. Pelvic floor muscle training is a recommended first-line treatment for stress urinary incontinence."),
  ("Do I have to have an internal exam?", "No. An internal assessment can give useful information, but it's always optional, requires your consent, and in Ontario can only be done by a physiotherapist rostered with the College for it. Many treatments can go ahead without one."),
- ("How long does pelvic floor training take to work?", "Many people notice improvement in 6 to 12 weeks of consistent training. Muscle strength continues to improve for several months."),
+ ("How long does pelvic floor training take to work?", "It varies. Training programs in research studies commonly run for about three months, and muscle strength keeps building with continued practice. Your physiotherapist will review your progress with you."),
 ],
 "related": ["postpartum-core-recovery-diastasis-recti", "virtual-vs-in-person-physiotherapy", "physiotherapy-cost-coverage-ontario"],
+"refs": [("Dumoulin C et al. Pelvic floor muscle training versus no treatment, or inactive control treatments, for urinary incontinence in women. Cochrane Database Syst Rev. 2018.", "https://pubmed.ncbi.nlm.nih.gov/30288727/")],
 },
 
 {
@@ -158,7 +159,7 @@ POSTS_B = [
 <p>In Ontario, you don't need a doctor's referral to see a physiotherapist. You can book directly. If the physiotherapist finds signs that you need imaging or a medical review, they will tell you and help you take the next step.</p>
 
 <h2 id="why-early">Why earlier is usually better</h2>
-<p>Early physiotherapy can help you recover faster, avoid the stiffness and weakness that come from protecting an injury for too long, and lower the risk of it happening again. Some injuries, such as ankle sprains, have a high re-injury rate when people return to activity without restoring balance and strength.</p>
+<p>Getting advice early helps you avoid resting more than you need to, which can lead to stiffness and weakness, and lets you start an appropriate rehab plan sooner. Some injuries, such as ankle sprains, are more likely to happen again if balance and strength aren't restored before returning to activity.</p>
 
 <h2 id="what-happens">What happens at your first physiotherapy visit</h2>
 <ol>
@@ -175,7 +176,7 @@ POSTS_B = [
 "faqs": [
  ("Do I need a referral to see a physiotherapist in Ontario?", "No. You can book directly with a registered physiotherapist. Some insurance plans require a doctor's note for reimbursement, so check your plan."),
  ("Should I use ice or heat after an injury?", "Ice can help with pain in the first few days. Heat is often more comfortable later for stiffness. Use whichever eases your symptoms, and avoid putting either directly on bare skin."),
- ("How soon after an injury can I start physiotherapy?", "Usually right away, once serious injuries have been ruled out. Early advice and gentle movement often lead to a faster recovery."),
+ ("How soon after an injury can I start physiotherapy?", "Usually right away, once serious injuries have been ruled out. Early advice can help you stay safely active while you recover."),
 ],
 "related": ["sports-injury-prevention", "lower-back-pain-at-home", "car-accident-physiotherapy-ontario"],
 },

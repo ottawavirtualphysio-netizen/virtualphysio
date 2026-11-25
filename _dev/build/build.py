@@ -124,7 +124,7 @@ for p in POSTS:
 HOME_FAQS = [
     ("What is the free intro call?", "A 15-minute phone call to answer questions about our services, visit types, availability and insurance. It's general information only, not an assessment, diagnosis or treatment, and there's no obligation to book."),
     ("Do I need a doctor's referral to book?", "No. In Ontario you can book directly with a registered physiotherapist. Some insurance plans ask for a doctor's note before reimbursing, so check your plan."),
-    ("Is virtual physiotherapy effective?", "Yes, for many conditions. Virtual physiotherapy supports assessment, education, exercise prescription and progress tracking, and research shows similar results to in-person care for many exercise-based treatments. If you need hands-on care, we'll arrange an in-home visit."),
+    ("Is virtual physiotherapy effective?", "Yes, for many conditions. Virtual physiotherapy supports assessment, education, exercise prescription and progress tracking, and research reviews suggest results can be comparable to in-person care for many exercise-based treatments. If you need hands-on care, we'll arrange an in-home visit."),
     ("Which areas of Ottawa do you cover?", "Virtual care is available anywhere in Ontario. In-home visits cover Ottawa and nearby communities, including Kanata, Stittsville, Barrhaven, Nepean, Orléans, Gloucester, Westboro, Centretown, Alta Vista, Riverside South, Findlay Creek and Manotick."),
     ("Is physiotherapy covered by my insurance?", "Many extended health plans cover physiotherapy by a registered physiotherapist, including virtual and in-home visits on many plans. Tell us your insurer when you book. Car accident injuries may be covered by auto insurance."),
     ("How do I book an appointment?", f"Book online, call {PHONE_DISPLAY} or send a WhatsApp message. Appointments are available Monday to Saturday, 9 AM to 7 PM."),
@@ -566,6 +566,13 @@ def build_post(p):
           {faq_html(p["faqs"])}''' if p.get("faqs") else ""
     if p.get("faqs"):
         toc += '<li><a href="#faq">FAQ</a></li>'
+    refs_block = ""
+    if p.get("refs"):
+        items = "".join(f'<li>{esc(t)} <a href="{u}" rel="noopener" target="_blank">Link</a></li>' for t, u in p["refs"])
+        refs_block = f'''
+          <h2 id="references">References</h2>
+          <ol class="refs">{items}</ol>'''
+        toc += '<li><a href="#references">References</a></li>'
     body = f'''    <article>
       <header class="article-hero">
         <div class="container">
@@ -580,7 +587,7 @@ def build_post(p):
         <figure class="article-cover">{pic(p["image"], p["image_alt"], w, h, eager=True)}</figure>
         <div class="article-layout">
           <div class="prose">
-{p["body"]}{faq_block}
+{p["body"]}{faq_block}{refs_block}
             <p class="notice" style="margin-top:2rem">This article is general information and isn't a substitute for an individual assessment. If you're unsure about your symptoms, speak to a physiotherapist or your doctor.</p>
             <div class="author-box">
               {pic("drashti-chauhan", "Drashti Chauhan", 800, 1067)}

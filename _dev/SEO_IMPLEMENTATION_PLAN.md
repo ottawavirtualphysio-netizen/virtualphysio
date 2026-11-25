@@ -21,7 +21,7 @@
 
 4. Improve image performance
    - Rename `Logo.png` to `virtual-physio-logo.png`.
-   - Rename `drashti-profile.png` to `drashti-chauhan-virtual-physiotherapist.png`.
+   - Rename `drashti-profile.jpg` to `drashti-chauhan-virtual-physiotherapist.png`.
    - Export WebP versions under 150 KB when an image tool is available.
    - Use `<picture>` with WebP first and PNG fallback.
 

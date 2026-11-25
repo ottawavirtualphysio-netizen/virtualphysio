@@ -132,6 +132,14 @@
                     <span class="service-picker-name">Sports Injury Care</span>
                     <span class="service-picker-price">Return to sport</span>
                   </button>
+                  <button type="button" class="service-picker-card" data-service="Pain Management">
+                    <span class="service-picker-name">Pain Management</span>
+                    <span class="service-picker-price">Pain relief</span>
+                  </button>
+                  <button type="button" class="service-picker-card" data-service="Motor Vehicle Accident Rehab">
+                    <span class="service-picker-name">Motor Vehicle Accident Rehab</span>
+                    <span class="service-picker-price">MVA recovery</span>
+                  </button>
                 </div>
               </fieldset>
               <label for="service" class="sr-only">Service Selection</label>
@@ -147,6 +155,8 @@
                   <option>Pelvic Floor Treatment</option>
                   <option>Post-Surgery Rehab</option>
                   <option>Sports Injury Care</option>
+                  <option>Pain Management</option>
+                  <option>Motor Vehicle Accident Rehab</option>
                 </select>
               </div>
               <small class="field-error" aria-live="polite"></small>
@@ -182,10 +192,10 @@
           </fieldset>
 
           <div class="form-row with-icon form-row--compact">
-            <label for="insurance">Do you have insurance? If yes, which one? *</label>
+            <label for="insurance">Do you have insurance? If yes, which one?</label>
             <div class="input-wrap">
               <span class="field-icon" aria-hidden="true">&#128737;</span>
-              <input id="insurance" name="insurance" type="text" autocomplete="off" required placeholder="e.g. Sun Life, Blue Cross, or N/A">
+              <input id="insurance" name="insurance" type="text" autocomplete="off" placeholder="e.g. Sun Life, Blue Cross (optional)">
             </div>
             <small class="field-error" aria-live="polite"></small>
           </div>

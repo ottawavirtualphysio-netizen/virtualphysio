@@ -302,11 +302,6 @@ if (bookingForm) {
         firstInvalidField = firstInvalidField || serviceInput;
       }
 
-      if (!String(insuranceInput?.value || "").trim()) {
-        setFieldError(insuranceInput, "Please tell us your insurance provider or enter N/A.");
-        firstInvalidField = firstInvalidField || insuranceInput;
-      }
-
       if (firstInvalidField) {
         if (status) status.textContent = "Please fix the highlighted fields and try again.";
         firstInvalidField.focus();

@@ -155,7 +155,7 @@
      "name": "Is physiotherapy covered by my insurance?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Many extended health plans cover physiotherapy by a registered physiotherapist, including virtual and in-home visits on many plans. Car accident injuries may be covered by auto insurance. Tell us your insurer when you book."
+      "text": "Many extended health plans cover physiotherapy by a registered physiotherapist, including virtual and in-home visits on many plans. Tell us your insurer when you book. Car accident injuries may be covered by auto insurance."
      }
     },
     {
@@ -174,6 +174,12 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span>Virtual &amp; in-home physiotherapy across Ottawa · Mon–Sat, 9:00 AM–7:00 PM</span>
+      <span class="topbar__links"><a href="tel:+13432024226" data-track="call_topbar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>+1 (343) 202-4226</a><a href="https://wa.me/13432024226" rel="noopener" data-track="whatsapp_topbar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>WhatsApp</a></span>
+    </div>
+  </div>
   <header class="site-header">
     <nav class="navbar container" aria-label="Main navigation">
       <a class="brand" href="/" aria-label="Virtual Physio home">
@@ -183,13 +189,13 @@
         <span></span><span></span><span></span>
       </button>
       <ul id="primary-menu" class="nav-menu">
-        <li><a href="/" aria-current="page">Home</a></li>
-        <li><a href="/about">About</a></li>
         <li><a href="/services">Services</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/blog">Resources</a></li>
+        <li><a href="/booking#contact">Contact</a></li>
+        <li class="nav-menu__book"><a href="/booking">Book an appointment</a></li>
       </ul>
-      <a class="nav-cta" href="/booking?service=Free%2015-Min%20Consultation" data-track="book_appointment_nav">Book Appointment</a>
+      <a class="nav-cta" href="/booking" data-track="book_appointment_nav">Book now</a>
     </nav>
   </header>
 
@@ -199,10 +205,10 @@
         <div>
           <span class="eyebrow">Virtual &amp; in-home physiotherapy · Ottawa</span>
           <h1>Physiotherapy that comes to you</h1>
-          <p class="lead">One-on-one care with Drashti Chauhan, Registered Physiotherapist, online or in your home anywhere in Ottawa. For back and neck pain, sports injuries, pelvic health, post-surgery rehab and car accident recovery.</p>
+          <p class="lead">One-on-one care with Drashti Chauhan, Registered Physiotherapist, online or in your home anywhere in Ottawa. No referral needed.</p>
           <div class="button-row">
-            <a class="btn btn-primary" href="/booking?service=Free%2015-Min%20Consultation" data-track="book_appointment_hero">Book a free 15-min consultation</a>
-            <a class="btn btn-secondary" href="tel:+13432024226" data-track="call_hero">Call +1 (343) 202-4226</a>
+            <a class="btn btn-primary" href="/booking" data-track="book_appointment_hero">Book an appointment</a>
+            <a class="btn btn-secondary" href="/booking?service=Free%2015-Min%20Consultation" data-track="book_consult_hero">Free 15-min consultation</a>
           </div>
           <ul class="trust-row">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5L15.5 10"/></svg>Registered physiotherapist</li>
@@ -220,57 +226,57 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" aria-labelledby="help-title">
       <div class="container">
         <div class="section-heading">
           <span class="eyebrow">Services</span>
-          <h2>Care for pain, injury and recovery</h2>
-          <p>Every plan starts with a thorough assessment and is built around your goals, whether that's walking without pain, lifting your kids or getting back on the ice.</p>
+          <h2 id="help-title">What do you need help with?</h2>
+          <p>Choose what fits best, or start with a free consultation if you're not sure.</p>
         </div>
         <div class="grid grid-4">
-          <a class="card card--link card--featured" href="/services#consult">
+          <a class="card card--link card--featured" href="/booking?service=Free%2015-Min%20Consultation">
             <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></span>
             <span class="card__text"><h3>Free 15&#8209;Min Consultation</h3>
-            <p>A free call to talk through your symptoms and goals and find the right next step.</p></span>
-            <span class="card__cta">Learn more &rarr;</span>
+            <p>Not sure where to start? A free call to talk through your symptoms and find the right next step.</p></span>
+            <span class="card__cta">Book free call &rarr;</span>
           </a>
-          <a class="card card--link" href="/services#virtual">
+          <a class="card card--link" href="/services/virtual-physiotherapy">
             <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="13" height="12" rx="2"/><path d="M15.5 10.5l6-3.5v10l-6-3.5"/></svg></span>
             <span class="card__text"><h3>Virtual Physiotherapy</h3>
-            <p>Live one-on-one video sessions: assessment, exercise and education from home.</p></span>
+            <p>Live one-on-one video sessions: assessment, exercise and advice from home.</p></span>
             <span class="card__cta">Learn more &rarr;</span>
           </a>
-          <a class="card card--link" href="/services#in-home">
+          <a class="card card--link" href="/services/in-home-physiotherapy">
             <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span>
             <span class="card__text"><h3>In-Home Physiotherapy</h3>
             <p>Hands-on physiotherapy at your home anywhere in the Ottawa area.</p></span>
             <span class="card__cta">Learn more &rarr;</span>
           </a>
-          <a class="card card--link" href="/services#post-surgery">
-            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="8" width="20" height="8" rx="4" transform="rotate(-45 12 12)"/><path d="M10 10h.01M14 14h.01M12 12h.01"/></svg></span>
-            <span class="card__text"><h3>Post-Surgery Rehab</h3>
-            <p>Step-by-step rehab after joint replacement, ACL repair, fractures and more.</p></span>
-            <span class="card__cta">Learn more &rarr;</span>
-          </a>
-          <a class="card card--link" href="/services#pain">
-            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></span>
-            <span class="card__text"><h3>Pain Management</h3>
-            <p>Relief and a long-term plan for back, neck, shoulder and joint pain.</p></span>
-            <span class="card__cta">Learn more &rarr;</span>
-          </a>
-          <a class="card card--link" href="/services#sports-injury">
-            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="14" cy="4.5" r="2"/><path d="M8 21l3-6 3 2v5"/><path d="M6 12l3-4 4 1 3 3 3 1"/><path d="M11 15l-2-3"/></svg></span>
-            <span class="card__text"><h3>Sports Injury Care</h3>
-            <p>Get back to running, hockey, soccer and the gym safely.</p></span>
-            <span class="card__cta">Learn more &rarr;</span>
-          </a>
-          <a class="card card--link" href="/services#pelvic-floor">
+          <a class="card card--link" href="/services/pelvic-floor-physiotherapy">
             <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span>
             <span class="card__text"><h3>Pelvic Floor Physiotherapy</h3>
             <p>Private, respectful care for leaking, pelvic pain, pregnancy and postpartum.</p></span>
             <span class="card__cta">Learn more &rarr;</span>
           </a>
-          <a class="card card--link" href="/services#mva">
+          <a class="card card--link" href="/services/post-surgery-rehabilitation">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="8" width="20" height="8" rx="4" transform="rotate(-45 12 12)"/><path d="M10 10h.01M14 14h.01M12 12h.01"/></svg></span>
+            <span class="card__text"><h3>Post-Surgery Rehab</h3>
+            <p>Step-by-step rehab after joint replacement, ACL repair, fractures and more.</p></span>
+            <span class="card__cta">Learn more &rarr;</span>
+          </a>
+          <a class="card card--link" href="/services/sports-injury-physiotherapy">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="14" cy="4.5" r="2"/><path d="M8 21l3-6 3 2v5"/><path d="M6 12l3-4 4 1 3 3 3 1"/><path d="M11 15l-2-3"/></svg></span>
+            <span class="card__text"><h3>Sports Injury Care</h3>
+            <p>Get back to running, hockey, soccer and the gym safely.</p></span>
+            <span class="card__cta">Learn more &rarr;</span>
+          </a>
+          <a class="card card--link" href="/services/pain-management">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></span>
+            <span class="card__text"><h3>Pain Management</h3>
+            <p>Relief and a long-term plan for back, neck, shoulder and joint pain.</p></span>
+            <span class="card__cta">Learn more &rarr;</span>
+          </a>
+          <a class="card card--link" href="/services/car-accident-rehab">
             <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16V11l2-5h10l2 5v5"/><path d="M3 16h18v3H3z"/><circle cx="7.5" cy="16" r="1.5"/><circle cx="16.5" cy="16" r="1.5"/></svg></span>
             <span class="card__text"><h3>Car Accident (MVA) Rehab</h3>
             <p>Recovery from whiplash and other car accident injuries.</p></span>
@@ -287,9 +293,9 @@
           <h2>Getting started is simple</h2>
         </div>
         <div class="steps">
-          <div class="step"><h3>Book a free consultation</h3><p>Book online, call or WhatsApp us. We'll talk through your symptoms and goals in a free 15-minute call.</p></div>
-          <div class="step"><h3>Get assessed</h3><p>A full one-on-one assessment online or at your home, with a clear explanation of what's going on.</p></div>
-          <div class="step"><h3>Follow your plan</h3><p>Treatment plus a personalised home program, with progress tracked at every session until you reach your goals.</p></div>
+          <div class="step"><h3>Send a request</h3><p>Book online in about a minute, or call or WhatsApp us. Choose virtual, in-home or a home clinic room visit.</p></div>
+          <div class="step"><h3>We confirm your time</h3><p>We'll contact you to confirm your appointment, usually the same day.</p></div>
+          <div class="step"><h3>Get assessed and treated</h3><p>A one-on-one assessment, a clear explanation, and a plan with exercises you can do at home.</p></div>
         </div>
       </div>
     </section>
@@ -305,33 +311,13 @@
           <p>I started Virtual Physio to make good physiotherapy easier to access: unhurried, one-on-one, and in a setting that works for you.</p>
           <div class="button-row">
             <a class="btn btn-primary" href="/booking" data-track="book_appointment_profile">Book with Drashti</a>
-            <a class="btn btn-secondary" href="/about">More about Drashti</a>
+            <a class="btn btn-secondary" href="/about">About Virtual Physio</a>
           </div>
         </div>
       </div>
     </section>
 
     <section class="section section--tint">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">Conditions</span>
-          <h2>What we help with</h2>
-        </div>
-        <div class="conditions">
-          <div class="condition"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M9 5h6M8.5 9h7M8.5 13h7M9 17h6"/></svg><span>Lower back pain and sciatica</span></div>
-          <div class="condition"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="6" r="3"/><path d="M10.5 9v3M13.5 9v3"/><path d="M6 20c0-4 2.7-7 6-7s6 3 6 7"/></svg><span>Neck pain and headaches</span></div>
-          <div class="condition"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v6M12 15v6"/><path d="M9 4h6M9 20h6"/></svg><span>Knee, hip and shoulder pain</span></div>
-          <div class="condition"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="14" cy="4.5" r="2"/><path d="M8 21l3-6 3 2v5"/><path d="M6 12l3-4 4 1 3 3 3 1"/><path d="M11 15l-2-3"/></svg><span>Sports injuries and sprains</span></div>
-          <div class="condition"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="8" width="20" height="8" rx="4" transform="rotate(-45 12 12)"/><path d="M10 10h.01M14 14h.01M12 12h.01"/></svg><span>Post-surgery recovery</span></div>
-          <div class="condition"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg><span>Pelvic floor and postpartum</span></div>
-          <div class="condition"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16V11l2-5h10l2 5v5"/><path d="M3 16h18v3H3z"/><circle cx="7.5" cy="16" r="1.5"/><circle cx="16.5" cy="16" r="1.5"/></svg><span>Whiplash and car accidents</span></div>
-          <div class="condition"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7a5 5 0 1 0 5 5"/><path d="M12 10a2 2 0 1 0 2 2"/></svg><span>Dizziness and balance</span></div>
-          <div class="condition"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg><span>Arthritis and persistent pain</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
       <div class="container split">
         <div>
           <span class="eyebrow">Why Virtual Physio</span>
@@ -341,7 +327,7 @@
             <li>No travel: virtual sessions or in-home visits across Ottawa</li>
             <li>Evenings and Saturdays available</li>
             <li>Clear explanations and a home program you can actually follow</li>
-            <li>Book by form, phone or WhatsApp</li>
+            <li>Book online, by phone or on WhatsApp</li>
           </ul>
         </div>
         <div>
@@ -380,10 +366,10 @@
       </div>
     </section>
 
-    <section class="section section--tint">
+    <section class="section">
       <div class="container">
         <div class="section-heading">
-          <span class="eyebrow">From the blog</span>
+          <span class="eyebrow">Resources</span>
           <h2>Physiotherapy advice you can use</h2>
         </div>
         <div class="grid grid-3">
@@ -419,7 +405,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section--tint">
       <div class="container narrow">
         <div class="section-heading section-heading--center">
           <span class="eyebrow">FAQ</span>
@@ -440,7 +426,7 @@
           </details>
           <details>
             <summary>Is physiotherapy covered by my insurance?</summary>
-            <p>Many extended health plans cover physiotherapy by a registered physiotherapist, including virtual and in-home visits on many plans. Car accident injuries may be covered by auto insurance. Tell us your insurer when you book.</p>
+            <p>Many extended health plans cover physiotherapy by a registered physiotherapist, including virtual and in-home visits on many plans. Tell us your insurer when you book. Car accident injuries may be covered by auto insurance.</p>
           </details>
           <details>
             <summary>How do I book an appointment?</summary>
@@ -458,7 +444,7 @@
             <p>Book a free 15-minute consultation. We'll talk through your symptoms and goals and suggest the right next step, whether that's virtual, in-home or in person.</p>
           </div>
           <div class="button-row">
-            <a class="btn btn-light" href="/booking?service=Free%2015-Min%20Consultation" data-track="book_cta_band">Book free consultation</a>
+            <a class="btn btn-light" href="/booking?service=Free%2015-Min%20Consultation" data-track="book_cta_band">Book a free consultation</a>
             <a class="btn btn-ghost-light" href="tel:+13432024226" data-track="call_cta_band">Call +1 (343) 202-4226</a>
           </div>
         </div>
@@ -476,12 +462,13 @@
       <div>
         <h2>Services</h2>
         <ul>
-          <li><a href="/services#virtual">Virtual physiotherapy</a></li>
-          <li><a href="/services#in-home">In-home physiotherapy</a></li>
-          <li><a href="/services#pelvic-floor">Pelvic floor physiotherapy</a></li>
-          <li><a href="/services#post-surgery">Post-surgery rehab</a></li>
-          <li><a href="/services#sports-injury">Sports injury care</a></li>
-          <li><a href="/services#mva">Car accident (MVA) rehab</a></li>
+          <li><a href="/services/virtual-physiotherapy">Virtual physiotherapy</a></li>
+          <li><a href="/services/in-home-physiotherapy">In-home physiotherapy</a></li>
+          <li><a href="/services/pelvic-floor-physiotherapy">Pelvic floor physiotherapy</a></li>
+          <li><a href="/services/post-surgery-rehabilitation">Post-surgery rehab</a></li>
+          <li><a href="/services/sports-injury-physiotherapy">Sports injury care</a></li>
+          <li><a href="/services/pain-management">Back, neck & joint pain</a></li>
+          <li><a href="/services/car-accident-rehab">Car accident (MVA) rehab</a></li>
         </ul>
       </div>
       <div>
@@ -502,17 +489,19 @@
           <li><a href="mailto:info@virtualphysio.ca">info@virtualphysio.ca</a></li>
           <li>Mon–Sat, 9:00 AM–7:00 PM</li>
           <li>Serving Ottawa, Kanata, Barrhaven, Orléans, Nepean and nearby</li>
+          <li><a href="/booking">Book an appointment</a></li>
         </ul>
       </div>
     </div>
     <div class="container footer-bottom">
-      <span>&copy; 2026 Virtual Physio, Ottawa, Ontario</span>
-      <span>Information on this site is general and is not a substitute for an individual assessment.</span>
+      <span>&copy; 2026 Virtual Physio, Ottawa, Ontario · <a href="/privacy">Privacy policy</a></span>
+      <span>Not an emergency service. In an emergency, call 911.</span>
     </div>
   </footer>
   <nav class="mobile-bar" aria-label="Quick contact">
     <a class="call" href="tel:+13432024226" data-track="call_mobile_bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>Call</span></a>
-    <a class="book" href="/booking?service=Free%2015-Min%20Consultation" data-track="book_mobile_bar">Book free consult</a>
+    <a class="wa" href="https://wa.me/13432024226" rel="noopener" data-track="whatsapp_mobile_bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><span>WhatsApp</span></a>
+    <a class="book" href="/booking" data-track="book_mobile_bar">Book now</a>
   </nav>
 
   <script src="/script.js?v=20261125" defer></script>

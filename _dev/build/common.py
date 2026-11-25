@@ -67,14 +67,20 @@ def pic(name, alt, w, h, cls="", eager=False, sizes="100vw"):
             f'{f" class={chr(34)}{cls}{chr(34)}" if cls else ""}></picture>')
 
 
-NAV = [("/", "Home"), ("/about", "About"), ("/services", "Services"), ("/blog", "Blog"), ("/contact", "Contact")]
+NAV = [("/services", "Services"), ("/about", "About"), ("/blog", "Resources"), ("/booking#contact", "Contact")]
 
 
 def header(active):
     items = "\n".join(
         f'        <li><a href="{href}"{" aria-current=" + chr(34) + "page" + chr(34) if href == active else ""}>{label}</a></li>'
-        for href, label in NAV)
+        for href, label in NAV) + '\n        <li class="nav-menu__book"><a href="/booking">Book an appointment</a></li>'
     return f'''  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span>Virtual &amp; in-home physiotherapy across Ottawa · {HOURS}</span>
+      <span class="topbar__links"><a href="tel:{PHONE_TEL}" data-track="call_topbar">{icon("phone")}{PHONE_DISPLAY}</a><a href="{WHATSAPP}" rel="noopener" data-track="whatsapp_topbar">{icon("chat")}WhatsApp</a></span>
+    </div>
+  </div>
   <header class="site-header">
     <nav class="navbar container" aria-label="Main navigation">
       <a class="brand" href="/" aria-label="Virtual Physio home">
@@ -86,19 +92,13 @@ def header(active):
       <ul id="primary-menu" class="nav-menu">
 {items}
       </ul>
-      <a class="nav-cta" href="/booking?service=Free%2015-Min%20Consultation" data-track="book_appointment_nav">Book Appointment</a>
+      <a class="nav-cta" href="/booking" data-track="book_appointment_nav">Book now</a>
     </nav>
   </header>'''
 
 
-FOOTER_SERVICES = [
-    ("Virtual physiotherapy", "/services#virtual"),
-    ("In-home physiotherapy", "/services#in-home"),
-    ("Pelvic floor physiotherapy", "/services#pelvic-floor"),
-    ("Post-surgery rehab", "/services#post-surgery"),
-    ("Sports injury care", "/services#sports-injury"),
-    ("Car accident (MVA) rehab", "/services#mva"),
-]
+from services_data import SERVICE_PAGES
+FOOTER_SERVICES = [(s["nav"], f"/services/{s['slug']}") for s in SERVICE_PAGES]
 
 
 def footer(posts):
@@ -131,17 +131,19 @@ def footer(posts):
           <li><a href="mailto:{EMAIL}">{EMAIL}</a></li>
           <li>{HOURS}</li>
           <li>Serving Ottawa, Kanata, Barrhaven, Orléans, Nepean and nearby</li>
+          <li><a href="/booking">Book an appointment</a></li>
         </ul>
       </div>
     </div>
     <div class="container footer-bottom">
-      <span>&copy; 2026 Virtual Physio, Ottawa, Ontario</span>
-      <span>Information on this site is general and is not a substitute for an individual assessment.</span>
+      <span>&copy; 2026 Virtual Physio, Ottawa, Ontario · <a href="/privacy">Privacy policy</a></span>
+      <span>Not an emergency service. In an emergency, call 911.</span>
     </div>
   </footer>
   <nav class="mobile-bar" aria-label="Quick contact">
     <a class="call" href="tel:{PHONE_TEL}" data-track="call_mobile_bar">{icon("phone")}<span>Call</span></a>
-    <a class="book" href="/booking?service=Free%2015-Min%20Consultation" data-track="book_mobile_bar">Book free consult</a>
+    <a class="wa" href="{WHATSAPP}" rel="noopener" data-track="whatsapp_mobile_bar">{icon("chat")}<span>WhatsApp</span></a>
+    <a class="book" href="/booking" data-track="book_mobile_bar">Book now</a>
   </nav>'''
 
 
@@ -272,7 +274,7 @@ def cta_band(title="Not sure where to start?", text="Book a free 15-minute consu
             <p>{text}</p>
           </div>
           <div class="button-row">
-            <a class="btn btn-light" href="/booking?service=Free%2015-Min%20Consultation" data-track="book_cta_band">Book free consultation</a>
+            <a class="btn btn-light" href="/booking?service=Free%2015-Min%20Consultation" data-track="book_cta_band">Book a free consultation</a>
             <a class="btn btn-ghost-light" href="tel:{PHONE_TEL}" data-track="call_cta_band">Call {PHONE_DISPLAY}</a>
           </div>
         </div>

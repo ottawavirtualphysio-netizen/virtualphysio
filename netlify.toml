@@ -29,7 +29,7 @@
 
 [[redirects]]
   from = "/contact.html"
-  to = "/contact"
+  to = "/booking"
   status = 301
 
 [[redirects]]
@@ -43,18 +43,18 @@
   status = 200
 
 [[redirects]]
-  from = "/services"
-  to = "/services.html"
-  status = 200
-
-[[redirects]]
   from = "/blog"
   to = "/blog.html"
   status = 200
 
 [[redirects]]
   from = "/contact"
-  to = "/contact.html"
+  to = "/booking"
+  status = 301
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
   status = 200
 
 [[redirects]]

@@ -60,7 +60,7 @@
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Blog",
+     "name": "Resources",
      "item": "https://virtualphysio.ca/blog"
     },
     {
@@ -179,6 +179,12 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span>Virtual &amp; in-home physiotherapy across Ottawa · Mon–Sat, 9:00 AM–7:00 PM</span>
+      <span class="topbar__links"><a href="tel:+13432024226" data-track="call_topbar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>+1 (343) 202-4226</a><a href="https://wa.me/13432024226" rel="noopener" data-track="whatsapp_topbar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>WhatsApp</a></span>
+    </div>
+  </div>
   <header class="site-header">
     <nav class="navbar container" aria-label="Main navigation">
       <a class="brand" href="/" aria-label="Virtual Physio home">
@@ -188,13 +194,13 @@
         <span></span><span></span><span></span>
       </button>
       <ul id="primary-menu" class="nav-menu">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
         <li><a href="/services">Services</a></li>
-        <li><a href="/blog" aria-current="page">Blog</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/blog" aria-current="page">Resources</a></li>
+        <li><a href="/booking#contact">Contact</a></li>
+        <li class="nav-menu__book"><a href="/booking">Book an appointment</a></li>
       </ul>
-      <a class="nav-cta" href="/booking?service=Free%2015-Min%20Consultation" data-track="book_appointment_nav">Book Appointment</a>
+      <a class="nav-cta" href="/booking" data-track="book_appointment_nav">Book now</a>
     </nav>
   </header>
 
@@ -202,7 +208,7 @@
     <article>
       <header class="article-hero">
         <div class="container">
-          <ol class="breadcrumb"><li><a href="/">Home</a></li><li><a href="/blog">Blog</a></li><li aria-current="page">Virtual vs in-person physiotherapy</li></ol>
+          <ol class="breadcrumb"><li><a href="/">Home</a></li><li><a href="/blog">Resources</a></li><li aria-current="page">Virtual vs in-person physiotherapy</li></ol>
           <span class="tag">Virtual Care</span>
           <h1>Virtual vs In-Person Physiotherapy: Which Is Right for You?</h1>
           <p class="lead">Physiotherapy over video can sound surprising at first. But much of what helps people recover, such as assessment, education and a well-progressed exercise program, works just as well through a screen.</p>
@@ -347,7 +353,7 @@
             <p>Book a free 15-minute consultation. We'll talk through your symptoms and goals and suggest the right next step, whether that's virtual, in-home or in person.</p>
           </div>
           <div class="button-row">
-            <a class="btn btn-light" href="/booking?service=Free%2015-Min%20Consultation" data-track="book_cta_band">Book free consultation</a>
+            <a class="btn btn-light" href="/booking?service=Free%2015-Min%20Consultation" data-track="book_cta_band">Book a free consultation</a>
             <a class="btn btn-ghost-light" href="tel:+13432024226" data-track="call_cta_band">Call +1 (343) 202-4226</a>
           </div>
         </div>
@@ -365,12 +371,13 @@
       <div>
         <h2>Services</h2>
         <ul>
-          <li><a href="/services#virtual">Virtual physiotherapy</a></li>
-          <li><a href="/services#in-home">In-home physiotherapy</a></li>
-          <li><a href="/services#pelvic-floor">Pelvic floor physiotherapy</a></li>
-          <li><a href="/services#post-surgery">Post-surgery rehab</a></li>
-          <li><a href="/services#sports-injury">Sports injury care</a></li>
-          <li><a href="/services#mva">Car accident (MVA) rehab</a></li>
+          <li><a href="/services/virtual-physiotherapy">Virtual physiotherapy</a></li>
+          <li><a href="/services/in-home-physiotherapy">In-home physiotherapy</a></li>
+          <li><a href="/services/pelvic-floor-physiotherapy">Pelvic floor physiotherapy</a></li>
+          <li><a href="/services/post-surgery-rehabilitation">Post-surgery rehab</a></li>
+          <li><a href="/services/sports-injury-physiotherapy">Sports injury care</a></li>
+          <li><a href="/services/pain-management">Back, neck & joint pain</a></li>
+          <li><a href="/services/car-accident-rehab">Car accident (MVA) rehab</a></li>
         </ul>
       </div>
       <div>
@@ -391,17 +398,19 @@
           <li><a href="mailto:info@virtualphysio.ca">info@virtualphysio.ca</a></li>
           <li>Mon–Sat, 9:00 AM–7:00 PM</li>
           <li>Serving Ottawa, Kanata, Barrhaven, Orléans, Nepean and nearby</li>
+          <li><a href="/booking">Book an appointment</a></li>
         </ul>
       </div>
     </div>
     <div class="container footer-bottom">
-      <span>&copy; 2026 Virtual Physio, Ottawa, Ontario</span>
-      <span>Information on this site is general and is not a substitute for an individual assessment.</span>
+      <span>&copy; 2026 Virtual Physio, Ottawa, Ontario · <a href="/privacy">Privacy policy</a></span>
+      <span>Not an emergency service. In an emergency, call 911.</span>
     </div>
   </footer>
   <nav class="mobile-bar" aria-label="Quick contact">
     <a class="call" href="tel:+13432024226" data-track="call_mobile_bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>Call</span></a>
-    <a class="book" href="/booking?service=Free%2015-Min%20Consultation" data-track="book_mobile_bar">Book free consult</a>
+    <a class="wa" href="https://wa.me/13432024226" rel="noopener" data-track="whatsapp_mobile_bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><span>WhatsApp</span></a>
+    <a class="book" href="/booking" data-track="book_mobile_bar">Book now</a>
   </nav>
 
   <script src="/script.js?v=20261125" defer></script>

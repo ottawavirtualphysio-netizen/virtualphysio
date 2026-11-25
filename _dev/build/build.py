@@ -200,7 +200,7 @@ def build_home():
           <span class="eyebrow">Meet your physiotherapist</span>
           <h2 id="meet-title">Drashti Chauhan, PT</h2>
           <p class="role">Registered Physiotherapist</p>
-          <p>I'm a Registered Physiotherapist (PT). I earned my Bachelor of Physiotherapy in India and, before my registration, I worked as a Physiotherapy Assistant in long-term care and private practice, which showed me how different everyone's rehabilitation needs are at each stage of life.</p>
+          <p>I'm a Registered Physiotherapist (PT) with the College of Physiotherapists of Ontario. I earned my Bachelor of Physiotherapy in India and, before my registration, I worked as a Physiotherapy Assistant in long-term care and private practice, which showed me how different everyone's rehabilitation needs are at each stage of life.</p>
           <p>I started Virtual Physio to make physiotherapy easier to access: one-on-one, and in a setting that works for you.</p>
           <div class="button-row">
             <a class="btn btn-primary" href="/booking" data-track="book_appointment_profile">Book with Drashti</a>
@@ -287,10 +287,10 @@ def build_about():
           <span class="eyebrow">Your physiotherapist</span>
           <h2 id="drashti">Drashti Chauhan, PT</h2>
           <p class="role">Registered Physiotherapist</p>
-          <p>I'm a Registered Physiotherapist (PT). I earned my Bachelor of Physiotherapy in India and then worked as a Physiotherapy Assistant in long-term care and private practice settings in Canada.</p>
+          <p>I'm a Registered Physiotherapist (PT) with the College of Physiotherapists of Ontario. I earned my Bachelor of Physiotherapy in India and then worked as a Physiotherapy Assistant in long-term care and private practice settings in Canada.</p>
           <p>Working with people from young athletes to older adults in long-term care taught me that good rehab isn't one-size-fits-all. It has to fit the person's body, goals, home and daily routine. That's why I offer care virtually and in your home.</p>
           <ul class="facts">
-            <li>{icon("shield")}Registered Physiotherapist (PT)</li>
+            <li>{icon("shield")}<span>Registered with the College of Physiotherapists of Ontario (<a href="https://collegept.org/about/public-register" rel="noopener" target="_blank">check the public register</a>)</span></li>
             <li>{icon("book")}Bachelor of Physiotherapy</li>
             <li>{icon("home")}Experience in long-term care</li>
             <li>{icon("user")}Experience in private practice</li>

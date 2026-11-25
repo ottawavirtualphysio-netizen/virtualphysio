@@ -111,7 +111,7 @@ def footer(posts):
     <div class="container footer-grid">
       <div>
         <a class="footer-logo-pill" href="/" aria-label="Virtual Physio home"><picture><source srcset="/img/logo.webp" type="image/webp"><img src="/img/logo.png" alt="Virtual Physio" width="150" height="67" loading="lazy" style="width:150px;height:auto"></picture></a>
-        <p>Virtual and in-home physiotherapy across Ottawa with Drashti Chauhan, PT. One-on-one care for pain, injury and recovery.</p>
+        <p>Virtual and in-home physiotherapy across Ottawa with Drashti Chauhan, PT, registered with the College of Physiotherapists of Ontario. <a href="https://collegept.org/about/public-register" rel="noopener" target="_blank">Public register</a></p>
         <p><a href="{WHATSAPP}" rel="noopener">Message us on WhatsApp</a></p>
       </div>
       <div>
@@ -177,6 +177,7 @@ PERSON = {
     "honorificSuffix": "PT",
     "image": f"{SITE}/img/drashti-chauhan.jpg",
     "worksFor": {"@id": f"{SITE}/#business"},
+    "memberOf": {"@type": "Organization", "name": "College of Physiotherapists of Ontario", "url": "https://collegept.org/"},
     "url": f"{SITE}/about",
 }
 

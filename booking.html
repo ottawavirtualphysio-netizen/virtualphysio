@@ -79,7 +79,7 @@
           </p>
           <span class="eyebrow">Secure booking form</span>
           <h2 id="booking-title">Book an appointment</h2>
-          <p id="form-help">Required fields are marked with an asterisk. Please enter a phone number with country code, for example +1 (343) 202-4226.</p>
+          <p id="form-help">Required fields are marked with an asterisk.</p>
 
           <div class="form-grid">
             <div class="form-row with-icon">
@@ -106,7 +106,20 @@
               </div>
               <small class="field-error" aria-live="polite"></small>
             </div>
-            <div class="form-row form-row--full">
+            <div class="form-row">
+            <label for="ageGroup">Patient's age group *</label>
+            <select id="ageGroup" name="ageGroup" required>
+              <option value="">Select age group</option>
+              <option>Under 18</option>
+              <option>18–34</option>
+              <option>35–49</option>
+              <option>50–64</option>
+              <option>65 or older</option>
+            </select>
+            <small class="age-note" hidden>Patients under 18 need a parent or guardian to book and to be present at appointments.</small>
+            <small class="field-error" aria-live="polite"></small>
+          </div>
+          <div class="form-row form-row--full">
               <fieldset class="service-picker" id="service-picker">
                 <legend>Service Selection *</legend>
                 <div class="service-picker-grid" role="group" aria-label="Choose a physiotherapy service">
@@ -243,6 +256,8 @@
         </aside>
       </div>
     </section>
+  
+  
   
   
   

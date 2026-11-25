@@ -175,23 +175,20 @@ if (bookingForm) {
   const encodeFormBody = (formData) =>
     new URLSearchParams(Array.from(formData.entries()).map(([key, value]) => [key, String(value)])).toString();
 
+  // Canadian/US numbers: 10 digits -> +1XXXXXXXXXX; 11 digits starting with 1 -> +1XXXXXXXXXX.
+  // Other international numbers must start with + and their country code.
   const normalizePhone = (value) => {
     const raw = String(value || "").trim();
-    const hasPlus = raw.startsWith("+");
     const digits = raw.replace(/\D/g, "").slice(0, 15);
-    return `${hasPlus ? "+" : ""}${digits}`;
+    if (digits.length === 10 && /^[2-9]/.test(digits)) return `+1${digits}`;
+    if (digits.length === 11 && digits.startsWith("1")) return `+${digits}`;
+    return raw.startsWith("+") ? `+${digits}` : digits;
   };
 
   const formatPhoneForDisplay = (value) => {
-    const normalized = normalizePhone(value);
-    const digits = normalized.replace(/\D/g, "");
-    if (!digits) return "";
-    const country = digits.slice(0, 3);
-    const remaining = digits.slice(3);
-    const p1 = remaining.slice(0, 3);
-    const p2 = remaining.slice(3, 6);
-    const p3 = remaining.slice(6, 10);
-    return `+${country}${p1 ? ` ${p1}` : ""}${p2 ? ` ${p2}` : ""}${p3 ? ` ${p3}` : ""}`;
+    const n = normalizePhone(value);
+    const m = /^\+1(\d{3})(\d{3})(\d{4})$/.exec(n);
+    return m ? `+1 (${m[1]}) ${m[2]}-${m[3]}` : String(value || "");
   };
 
   const isValidPhone = (value) => /^\+\d{8,15}$/.test(normalizePhone(value));
@@ -217,10 +214,19 @@ if (bookingForm) {
     });
   };
 
+  const ageSelect = bookingForm.querySelector('select[name="ageGroup"]');
+  if (ageSelect) {
+    ageSelect.addEventListener("change", () => {
+      setFieldError(ageSelect, "");
+      const note = ageSelect.closest(".form-row")?.querySelector(".age-note");
+      if (note) note.hidden = ageSelect.value !== "Under 18";
+    });
+  }
+
   if (phoneInput) {
-    phoneInput.addEventListener("input", () => {
+    phoneInput.addEventListener("input", () => setFieldError(phoneInput, ""));
+    phoneInput.addEventListener("blur", () => {
       phoneInput.value = formatPhoneForDisplay(phoneInput.value);
-      setFieldError(phoneInput, "");
     });
   }
 
@@ -285,7 +291,7 @@ if (bookingForm) {
       }
 
       if (!isValidPhone(phoneInput?.value || "")) {
-        setFieldError(phoneInput, "Please enter a valid phone number with country code.");
+        setFieldError(phoneInput, "Please enter a valid phone number, e.g. 343 202 4226.");
         firstInvalidField = firstInvalidField || phoneInput;
       } else if (phoneInput) {
         phoneInput.value = normalizePhone(phoneInput.value);
@@ -302,6 +308,12 @@ if (bookingForm) {
         firstInvalidField = firstInvalidField || serviceInput;
       }
 
+      const ageInput = bookingForm.querySelector('select[name="ageGroup"]');
+      if (ageInput && !String(ageInput.value || "").trim()) {
+        setFieldError(ageInput, "Please select the patient's age group.");
+        firstInvalidField = firstInvalidField || ageInput;
+      }
+
       if (firstInvalidField) {
         if (status) status.textContent = "Please fix the highlighted fields and try again.";
         firstInvalidField.focus();
@@ -314,6 +326,7 @@ if (bookingForm) {
         phone: String(submitData.get("phone") || ""),
         email: String(submitData.get("email") || ""),
         service: String(submitData.get("service") || ""),
+        ageGroup: String(submitData.get("ageGroup") || ""),
         date: String(submitData.get("date") || ""),
         time: String(submitData.get("time") || ""),
         problemArea: submitData.getAll("problemArea").join(", "),
@@ -345,8 +358,33 @@ if (bookingForm) {
         throw new Error("Form submit failed");
       }
 
+      const waLines = [
+        "Hi Virtual Physio, I just sent an appointment request on your website:",
+        `Name: ${payload.name}`,
+        `Phone: ${payload.phone}`,
+        payload.ageGroup ? `Age group: ${payload.ageGroup}` : "",
+        `Service: ${payload.service}`,
+        payload.date ? `Preferred date: ${payload.date}${payload.time ? " at " + payload.time : ""}` : "",
+        payload.problemArea ? `Problem area: ${payload.problemArea}` : ""
+      ].filter(Boolean);
+      const waUrl = `https://wa.me/13432024226?text=${encodeURIComponent(waLines.join("\n"))}`;
+
       if (status) {
-        status.textContent = `Thanks, ${name}. Your appointment request was submitted successfully. Thanks for choosing us.`;
+        status.innerHTML = "";
+        const msg = document.createElement("p");
+        msg.textContent = `Thanks, ${name}! Your request has been received. Tap the button below to also send it to us on WhatsApp for the fastest reply.`;
+        const btn = document.createElement("a");
+        btn.className = "btn btn-whatsapp";
+        btn.href = waUrl;
+        btn.target = "_blank";
+        btn.rel = "noopener";
+        btn.textContent = "Send on WhatsApp";
+        btn.setAttribute("data-track", "whatsapp_after_submit");
+        status.append(msg, btn);
+      }
+      // On phones, open WhatsApp automatically (the button stays as a fallback).
+      if (window.matchMedia("(max-width: 900px)").matches) {
+        setTimeout(() => { window.location.href = waUrl; }, 1200);
       }
       trackConversion("generate_lead", {
         page_path: window.location.pathname,

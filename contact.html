@@ -93,6 +93,19 @@
             <input id="email" name="email" type="email" autocomplete="email">
           </div>
           <div class="form-row">
+            <label for="ageGroup">Patient's age group *</label>
+            <select id="ageGroup" name="ageGroup" required>
+              <option value="">Select age group</option>
+              <option>Under 18</option>
+              <option>18–34</option>
+              <option>35–49</option>
+              <option>50–64</option>
+              <option>65 or older</option>
+            </select>
+            <small class="age-note" hidden>Patients under 18 need a parent or guardian to book and to be present at appointments.</small>
+            <small class="field-error" aria-live="polite"></small>
+          </div>
+          <div class="form-row">
             <label for="service">Service</label>
             <select id="service" name="service">
               <option>Free 15-Min Consultation</option>
@@ -144,6 +157,8 @@
         </aside>
       </div>
     </section>
+  
+  
   
   
   

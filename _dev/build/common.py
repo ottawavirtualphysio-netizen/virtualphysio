@@ -133,14 +133,14 @@ def footer(posts):
           <li><a href="tel:{PHONE_TEL}">{PHONE_DISPLAY}</a></li>
           <li><a href="mailto:{EMAIL}">{EMAIL}</a></li>
           <li>{HOURS}</li>
-          <li>Serving Ottawa, Kanata, Barrhaven, Orléans, Nepean and nearby</li>
+          <li>In-home visits: <a href="/areas/kanata">Kanata</a>, <a href="/areas/barrhaven">Barrhaven</a>, <a href="/areas/orleans">Orléans</a>, <a href="/areas/nepean">Nepean</a> and <a href="/areas">more</a></li>
           <li><a href="/booking">Book an appointment</a></li>
         </ul>
       </div>
     </div>
     <div class="container footer-bottom">
       <span>&copy; 2026 Virtual Physio, Ottawa, Ontario · <a href="/privacy">Privacy policy</a></span>
-      <span>Not an emergency service. In an emergency, call 911.</span>
+      <span>Not an emergency service. In an emergency, call 911. Photos are for illustration.</span>
     </div>
   </footer>
   <nav class="mobile-bar" aria-label="Quick contact">
@@ -268,7 +268,7 @@ def page(*, path, title, description, active, body, posts, schema="", og_image=O
 '''
 
 
-def cta_band(title="Not sure where to start?", text="Book a free 15-minute consultation. We'll talk through your symptoms and goals and suggest the right next step, whether that's virtual, in-home or in person."):
+def cta_band(title="Ready to get started?", text="Book online in about a minute, or call or WhatsApp us. Have questions first? Book a free 15-minute intro call (general information only, not an assessment)."):
     return f'''    <section class="section section--tight">
       <div class="container">
         <div class="cta-band">
@@ -277,7 +277,7 @@ def cta_band(title="Not sure where to start?", text="Book a free 15-minute consu
             <p>{text}</p>
           </div>
           <div class="button-row">
-            <a class="btn btn-light" href="/booking?service=Free%2015-Min%20Consultation" data-track="book_cta_band">Book a free consultation</a>
+            <a class="btn btn-light" href="/booking" data-track="book_cta_band">Book an appointment</a>
             <a class="btn btn-ghost-light" href="tel:{PHONE_TEL}" data-track="call_cta_band">Call {PHONE_DISPLAY}</a>
           </div>
         </div>

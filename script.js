@@ -73,7 +73,8 @@
     "Physiotherapy Extended Treatment": "Initial Assessment",
     "In-Home Treatment": "Initial Assessment",
     "Pelvic Floor Treatment": "Pelvic Floor Physiotherapy",
-    "Motor Vehicle Accident Rehab": "Car Accident (MVA) Rehab"
+    "Motor Vehicle Accident Rehab": "Car Accident (MVA) Rehab",
+    "Free 15-Min Consultation": "Free 15-Min Intro Call"
   };
 
   // Phone: 10 digits -> +1XXXXXXXXXX; 11 digits starting with 1 -> +1...; others need +country code
@@ -228,7 +229,7 @@
       var h = document.createElement("h2");
       h.textContent = "Thanks, " + d.name.split(" ")[0] + "! Your request was sent.";
       var p = document.createElement("p");
-      p.textContent = "We'll contact you to confirm your appointment, usually the same day. For the fastest reply, also send your request to us on WhatsApp:";
+      p.textContent = "We'll contact you to confirm your appointment. You can also send your request to us on WhatsApp:";
       var a = document.createElement("a");
       a.className = "btn btn-whatsapp";
       a.href = wa; a.target = "_blank"; a.rel = "noopener";

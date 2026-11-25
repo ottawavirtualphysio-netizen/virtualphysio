@@ -47,8 +47,8 @@ SERVICE_PAGES = [
 "seo_title": "In-Home Physiotherapy Ottawa | Mobile Physio",
 "description": "A registered physiotherapist comes to your home in Ottawa, Kanata, Barrhaven, Orléans, Nepean and nearby. Hands-on care for pain, surgery recovery and balance.",
 "lead": "Your physiotherapist comes to you. Hands-on treatment and exercise built around your real home: your stairs, your chair, your space.",
-"image": "home-visit-knee",
-"image_alt": "Physiotherapist working on leg strength with an older man at home",
+"image": "balance-training",
+"image_alt": "Physiotherapist supporting an older woman during balance practice at home",
 "for": [
   "Recovery after surgery or a fracture",
   "Older adults, balance problems and falls prevention",
@@ -80,7 +80,7 @@ SERVICE_PAGES = [
 "title": "Pelvic Floor Physiotherapy in Ottawa",
 "seo_title": "Pelvic Floor Physiotherapy Ottawa | Virtual & In-Home",
 "description": "Pelvic floor physiotherapy for bladder leaking, pelvic pain, prolapse symptoms, pregnancy and postpartum recovery and diastasis recti. Virtual or in-home in Ottawa.",
-"lead": "Bladder leaks, pelvic pain and heaviness are common, but you don't have to live with them. Pelvic floor physiotherapy is a proven first-line treatment.",
+"lead": "Bladder leaks, pelvic pain and heaviness are common, but you don't have to live with them. Pelvic floor muscle training is a recommended first-line treatment for many of these problems.",
 "image": "mat-dumbbells",
 "image_alt": "Exercise mat and light weights set up for a home session",
 "for": [
@@ -93,11 +93,11 @@ SERVICE_PAGES = [
 ],
 "expect": [
   ("A private conversation", "We talk through your symptoms, bladder and bowel habits, pregnancies and goals, at your pace."),
-  ("Assessment, with your consent", "Posture, breathing, core and hips, and an internal assessment only if you choose. You can decline or stop anything at any time."),
+  ("Assessment, with your consent", "Posture, breathing, abdominal wall, core and hips. Every part is explained first, and you can decline or stop anything at any time."),
   ("Treatment", "Strengthening or relaxation training, bladder strategies and a plan to return to running, lifting or sport."),
 ],
 "faqs": [
-  ("Do I have to have an internal exam?", "No. It's always optional and only done with your consent. Treatment can still work without it."),
+  ("Is the assessment private?", "Yes. Sessions are one-on-one, every step is explained first, and nothing is done without your consent. You can bring a support person if you like."),
   ("Can pelvic floor physiotherapy be done virtually?", "Much of it can, including education, breathing and muscle training, bladder strategies and core rehab. It's also a comfortable first step."),
   ("When can I start after giving birth?", "Gentle breathing and pelvic floor exercises can often begin within days. A postpartum check is commonly booked around six weeks after birth."),
 ],
@@ -148,7 +148,7 @@ SERVICE_PAGES = [
 "title": "Sports Injury Physiotherapy in Ottawa",
 "seo_title": "Sports Injury Physiotherapy Ottawa | Return to Sport",
 "description": "Assessment and rehab for sprains, strains, tendon pain and running injuries, with return-to-sport testing. Virtual and in-home physiotherapy in Ottawa.",
-"lead": "Assessment and rehab that gets you back to your sport, and makes you less likely to get hurt again.",
+"lead": "Assessment and rehab to help you return to your sport safely, with a plan to lower your risk of re-injury.",
 "image": "sports-knee-assessment",
 "image_alt": "Physiotherapist assessing a young man's knee",
 "for": [
@@ -182,7 +182,7 @@ SERVICE_PAGES = [
 "title": "Physiotherapy for Back, Neck and Joint Pain in Ottawa",
 "seo_title": "Back & Neck Pain Physiotherapy Ottawa | Pain Management",
 "description": "Physiotherapy for lower back pain, sciatica, neck pain, headaches, shoulder pain and arthritis. Clear explanations, hands-on relief and a plan that lasts.",
-"lead": "Clear answers about what's causing your pain, relief now, and a plan to keep it from coming back.",
+"lead": "A clear explanation of what's likely causing your pain, strategies to ease it, and a plan to help you manage flare-ups.",
 "image": "back-treatment",
 "image_alt": "Physiotherapist treating a woman's lower back",
 "for": [
@@ -195,12 +195,12 @@ SERVICE_PAGES = [
 ],
 "expect": [
   ("Understand it", "A thorough assessment, screening for anything that needs medical attention, and a plain-language explanation."),
-  ("Calm it down", "Hands-on techniques, movement strategies and pacing to reduce pain and help you sleep."),
+  ("Ease symptoms", "Hands-on techniques, movement strategies and pacing to help reduce pain and improve sleep."),
   ("Build resilience", "A graded strength and activity plan so you can get back to what you enjoy and know how to handle flare-ups."),
 ],
 "faqs": [
   ("Do I need a scan before physiotherapy?", "Usually not. Most back and neck pain can be assessed and treated without imaging. We'll refer you if anything suggests you need one."),
-  ("How many sessions will I need?", "Many people notice improvement within a few sessions. Long-standing pain often needs a longer plan, mostly built around exercise you do at home."),
+  ("How many sessions will I need?", "It varies from person to person. Your physiotherapist will recommend a plan after your assessment. Long-standing pain often needs a longer plan, mostly built around exercise you do at home."),
   ("Is exercise safe when I'm in pain?", "The right exercise, at the right dose, is one of the most effective treatments for persistent pain. We'll start where you're comfortable."),
 ],
 "posts": ["lower-back-pain-at-home", "tech-neck-posture-pain", "when-to-see-physiotherapist"],
@@ -217,8 +217,8 @@ SERVICE_PAGES = [
 "seo_title": "Car Accident Physiotherapy Ottawa | Whiplash & MVA Rehab",
 "description": "Physiotherapy after a car accident in Ottawa: whiplash, back pain, headaches and concussion symptoms. In-home and virtual care, with accident benefits guidance.",
 "lead": "Pain and stiffness after a car accident often show up a day or two later. Early assessment helps your recovery and your insurance claim.",
-"image": "side-lying-rehab",
-"image_alt": "Physiotherapist guiding a man through a rehab exercise at home",
+"image": "neck-assessment",
+"image_alt": "Physiotherapist assessing a patient's neck and shoulders",
 "for": [
   "Whiplash and neck pain",
   "Back and shoulder injuries",

@@ -6,8 +6,8 @@ POSTS_A = [
 "description": "Who benefits from in-home physiotherapy in Ottawa, what happens at the first home visit, how to prepare your space, and how it compares with clinic care.",
 "category": "In-Home Care",
 "published": "2026-07-10",
-"image": "home-visit-knee",
-"image_alt": "Physiotherapist working on knee strength with an older man at home in his living room",
+"image": "hero-home-visit",
+"image_alt": "Physiotherapist helping an older woman with a resistance band exercise at home",
 "lead": "For many people the hardest part of physiotherapy is getting to the appointment. In-home physiotherapy brings the assessment and treatment to you, and lets your plan fit the place where you actually live and move.",
 "body": """
 <h2 id="what-is">What is in-home physiotherapy?</h2>

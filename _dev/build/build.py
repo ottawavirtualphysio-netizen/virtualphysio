@@ -66,12 +66,12 @@ def fmt_date(d):
 from services_data import SERVICE_PAGES
 SP_BY_SLUG = {s["slug"]: s for s in SERVICE_PAGES}
 
-CONSULT = dict(slug=None, icon="chat", name="Free 15&#8209;Min Consultation", book="Free 15-Min Consultation",
-               card="Not sure where to start? A free call to talk through your symptoms and find the right next step.")
+CONSULT = dict(slug=None, icon="chat", name="Free 15&#8209;Min Intro Call", book="Free 15-Min Intro Call",
+               card="Questions before you book? A short call about our services and how visits work. General information only, not an assessment.")
 
 # Values patients can pick on the booking form (stored in Netlify as-is).
 BOOK_SERVICES = [
-    ("Free 15-Min Consultation", "Free · 15 min call"),
+    ("Free 15-Min Intro Call", "Questions only · not an assessment"),
     ("Initial Assessment", "First visit"),
     ("Follow-up Treatment", "Returning patient"),
     ("Pelvic Floor Physiotherapy", "Pelvic health"),
@@ -122,6 +122,7 @@ for p in POSTS:
 
 # ── Home ───────────────────────────────────────────────────
 HOME_FAQS = [
+    ("What is the free intro call?", "A 15-minute phone call to answer questions about our services, visit types, availability and insurance. It's general information only, not an assessment, diagnosis or treatment, and there's no obligation to book."),
     ("Do I need a doctor's referral to book?", "No. In Ontario you can book directly with a registered physiotherapist. Some insurance plans ask for a doctor's note before reimbursing, so check your plan."),
     ("Is virtual physiotherapy effective?", "Yes, for many conditions. Virtual physiotherapy supports assessment, education, exercise prescription and progress tracking, and research shows similar results to in-person care for many exercise-based treatments. If you need hands-on care, we'll arrange an in-home visit."),
     ("Which areas of Ottawa do you cover?", "Virtual care is available anywhere in Ontario. In-home visits cover Ottawa and nearby communities, including Kanata, Stittsville, Barrhaven, Nepean, Orléans, Gloucester, Westboro, Centretown, Alta Vista, Riverside South, Findlay Creek and Manotick."),
@@ -147,7 +148,7 @@ def build_home():
           <p class="lead">One-on-one care with Drashti Chauhan, Registered Physiotherapist, online or in your home anywhere in Ottawa. No referral needed.</p>
           <div class="button-row">
             <a class="btn btn-primary" href="/booking" data-track="book_appointment_hero">Book an appointment</a>
-            <a class="btn btn-secondary" href="/booking?service=Free%2015-Min%20Consultation" data-track="book_consult_hero">Free 15-min consultation</a>
+            <a class="btn btn-secondary" href="/booking?service=Free%2015-Min%20Intro%20Call" data-track="book_consult_hero">Free 15-min intro call</a>
           </div>
           <ul class="trust-row">
             <li>{icon("shield")}Registered physiotherapist</li>
@@ -170,7 +171,7 @@ def build_home():
         <div class="section-heading">
           <span class="eyebrow">Services</span>
           <h2 id="help-title">What do you need help with?</h2>
-          <p>Choose what fits best, or start with a free consultation if you're not sure.</p>
+          <p>Choose what fits best, or book a free intro call if you have questions first.</p>
         </div>
         <div class="grid grid-4">
 {svc_cards}
@@ -186,7 +187,7 @@ def build_home():
         </div>
         <div class="steps">
           <div class="step"><h3>Send a request</h3><p>Book online in about a minute, or call or WhatsApp us. Choose virtual, in-home or a home clinic room visit.</p></div>
-          <div class="step"><h3>We confirm your time</h3><p>We'll contact you to confirm your appointment, usually the same day.</p></div>
+          <div class="step"><h3>We confirm your time</h3><p>We'll contact you to confirm your appointment time.</p></div>
           <div class="step"><h3>Get assessed and treated</h3><p>A one-on-one assessment, a clear explanation, and a plan with exercises you can do at home.</p></div>
         </div>
       </div>
@@ -199,8 +200,8 @@ def build_home():
           <span class="eyebrow">Meet your physiotherapist</span>
           <h2 id="meet-title">Drashti Chauhan, PT</h2>
           <p class="role">Registered Physiotherapist</p>
-          <p>I'm a registered physiotherapist (PT) in Canada with a Bachelor of Physiotherapy from India. Before my registration, I worked as a Physiotherapy Assistant in long-term care and private practice, which showed me how different everyone's rehabilitation needs are at each stage of life.</p>
-          <p>I started Virtual Physio to make good physiotherapy easier to access: unhurried, one-on-one, and in a setting that works for you.</p>
+          <p>I'm a Registered Physiotherapist (PT). I earned my Bachelor of Physiotherapy in India and, before my registration, I worked as a Physiotherapy Assistant in long-term care and private practice, which showed me how different everyone's rehabilitation needs are at each stage of life.</p>
+          <p>I started Virtual Physio to make physiotherapy easier to access: one-on-one, and in a setting that works for you.</p>
           <div class="button-row">
             <a class="btn btn-primary" href="/booking" data-track="book_appointment_profile">Book with Drashti</a>
             <a class="btn btn-secondary" href="/about">About Virtual Physio</a>
@@ -213,7 +214,7 @@ def build_home():
       <div class="container split">
         <div>
           <span class="eyebrow">Why Virtual Physio</span>
-          <h2>Unhurried, one-on-one care that fits your life</h2>
+          <h2>One-on-one care that fits your life</h2>
           <ul class="ticks">
             <li>Every session one-on-one with a registered physiotherapist</li>
             <li>No travel: virtual sessions or in-home visits across Ottawa</li>
@@ -224,7 +225,7 @@ def build_home():
         </div>
         <div>
           <h3>In-home visits across Ottawa</h3>
-          <p class="muted">Virtual care is available anywhere in Ontario. We visit homes in:</p>
+          <p class="muted">Virtual care is available anywhere in Ontario. We visit homes in (<a href="/areas">see all areas</a>):</p>
           <ul class="chips">
 {areas}
           </ul>
@@ -269,7 +270,7 @@ def build_home():
 # ── About ──────────────────────────────────────────────────
 def build_about():
     trail = [("Home", "/"), ("About", "/about")]
-    w, h = img_size("home-visit-knee")
+    w, h = img_size("shoulder-strength")
     body = f'''    <section class="page-hero">
       <div class="container">
         {breadcrumb_html(trail)}
@@ -286,7 +287,7 @@ def build_about():
           <span class="eyebrow">Your physiotherapist</span>
           <h2 id="drashti">Drashti Chauhan, PT</h2>
           <p class="role">Registered Physiotherapist</p>
-          <p>I'm a registered physiotherapist (PT) in Canada. I earned my Bachelor of Physiotherapy in India and then worked as a Physiotherapy Assistant in long-term care and private practice settings in Canada.</p>
+          <p>I'm a Registered Physiotherapist (PT). I earned my Bachelor of Physiotherapy in India and then worked as a Physiotherapy Assistant in long-term care and private practice settings in Canada.</p>
           <p>Working with people from young athletes to older adults in long-term care taught me that good rehab isn't one-size-fits-all. It has to fit the person's body, goals, home and daily routine. That's why I offer care virtually and in your home.</p>
           <ul class="facts">
             <li>{icon("shield")}Registered Physiotherapist (PT)</li>
@@ -301,7 +302,7 @@ def build_about():
 
     <section class="section section--tint">
       <div class="container split">
-        <div class="media-frame">{pic("home-visit-knee", "Physiotherapist working with an older man at home", w, h)}</div>
+        <div class="media-frame">{pic("shoulder-strength", "Older adult doing a light dumbbell exercise with support", w, h)}</div>
         <div>
           <span class="eyebrow">Our approach</span>
           <h2>Listen first, then build a plan that works in real life</h2>
@@ -340,7 +341,7 @@ def build_about():
 # ── Services ───────────────────────────────────────────────
 SERVICE_FAQS = [
     ("How many sessions will I need?", "It depends on your condition and goals. After your assessment your physiotherapist will recommend a plan. Many people start weekly and space sessions out as they improve."),
-    ("Virtual, in-home or home clinic room: which should I choose?", "Virtual works well for exercise-based care, education and follow-ups. In-home is best when hands-on treatment is needed or travel is hard. The home clinic room offers in-person care by request. Not sure? Book a free consultation."),
+    ("Virtual, in-home or home clinic room: which should I choose?", "Virtual works well for exercise-based care, education and follow-ups. In-home is best when hands-on treatment is needed or travel is hard. The home clinic room offers in-person care by request. Not sure? Book a free intro call and we'll explain the options."),
     ("Do I need a referral?", "No. In Ontario you can book directly with a physiotherapist. Some insurance plans require a doctor's note for reimbursement."),
     ("Is physiotherapy covered by insurance?", "Many extended health plans cover physiotherapy by a registered physiotherapist. Car accident injuries may be covered through auto insurance. Tell us your insurer when you book."),
     ("What should I wear?", "Comfortable clothing that lets the area being treated be seen and moved, for example shorts for a knee problem."),
@@ -355,7 +356,7 @@ def build_services():
         {breadcrumb_html(trail)}
         <span class="eyebrow">Services</span>
         <h1>Physiotherapy services in Ottawa</h1>
-        <p>Every session is one-on-one with a registered physiotherapist, online or in your home. Choose a service to learn more, or start with a free consultation.</p>
+        <p>Every session is one-on-one with a registered physiotherapist, online or in your home. Choose a service to learn more.</p>
       </div>
     </section>
 
@@ -449,9 +450,9 @@ def build_service_page(s):
           <ul class="ticks">{who}</ul>
         </div>
         <div class="card">
-          <h3>Not sure if this is right for you?</h3>
-          <p>Book a free 15-minute call. We'll listen, answer your questions and suggest the best next step.</p>
-          <a class="btn btn-primary" href="/booking?service=Free%2015-Min%20Consultation" style="align-self:flex-start">Book a free consultation</a>
+          <h3>Have questions first?</h3>
+          <p>Book a free 15-minute intro call to ask about our services, visit types and what to expect. It's general information only, not an assessment or treatment, and there's no obligation to book.</p>
+          <a class="btn btn-primary" href="/booking?service=Free%2015-Min%20Intro%20Call" style="align-self:flex-start">Book a free intro call</a>
         </div>
       </div>
     </section>
@@ -493,7 +494,7 @@ def build_service_page(s):
       </div>
     </section>
 
-{cta_band("Ready to book?", "Send a request online in about a minute, or call or WhatsApp us. We'll confirm your appointment, usually the same day.")}'''
+{cta_band("Ready to book?", "Send a request online in about a minute, or call or WhatsApp us. We'll contact you to confirm your appointment.")}'''
     svc_ld = {"@type": "MedicalTherapy", "name": s["name"].replace("&#8209;", "-"), "description": s["description"], "url": SITE + path,
               "provider": {"@id": f"{SITE}/#business"}}
     write(f"services/{s['slug']}/index.html",
@@ -589,7 +590,7 @@ def build_post(p):
           <aside class="toc" aria-label="On this page">
             <h2>On this page</h2>
             <ol>{toc}</ol>
-            <a class="btn btn-primary" href="/booking?service=Free%2015-Min%20Consultation" data-track="book_from_article">Free 15-min consult</a>
+            <a class="btn btn-primary" href="/booking" data-track="book_from_article">Book an appointment</a>
           </aside>
         </div>
       </div>
@@ -629,6 +630,101 @@ def build_post(p):
                preload=f'  <link rel="preload" as="image" href="/img/{p["image"]}.webp" type="image/webp" fetchpriority="high">\n'))
 
 
+# ── Area pages ─────────────────────────────────────────────
+from areas_data import AREA_PAGES
+
+
+def build_area_page(a):
+    path = f"/areas/{a['slug']}"
+    trail = [("Home", "/"), ("Areas we serve", "/areas"), (a["name"], path)]
+    nearby = "".join(f"<li>{n}</li>" for n in a["nearby"])
+    svc = "\n".join(service_card(s) for s in SERVICE_PAGES)
+    faqs = [
+        (f"Do you offer in-home physiotherapy in {a['name']}?", f"Yes. We visit homes in {a['name']} and nearby neighbourhoods. Choose \"In my home\" when you book and tell us your area, and we'll confirm the visit."),
+        (f"Can I do virtual physiotherapy from {a['name']}?", "Yes. Virtual sessions work from anywhere in Ontario. You just need a phone, tablet or computer with a camera."),
+        ("Do I need a referral?", "No. In Ontario you can book directly with a physiotherapist. Some insurance plans ask for a doctor's note before they reimburse."),
+    ]
+    body = f'''    <section class="page-hero">
+      <div class="container">
+        {breadcrumb_html(trail)}
+        <span class="eyebrow">Areas we serve</span>
+        <h1>Physiotherapy in {a["name"]}: in-home and virtual</h1>
+        <p>One-on-one physiotherapy with Drashti Chauhan, Registered Physiotherapist, at your home in {a["name"]} or online. {HOURS}.</p>
+        <div class="button-row">
+          <a class="btn btn-primary" href="{book_url("Initial Assessment", "In my home")}" data-track="book_area_page">Book a home visit</a>
+          <a class="btn btn-secondary" href="{book_url("Initial Assessment", "Virtual")}">Book a virtual session</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div>
+          <h2>Care that comes to you in {a["name"]}</h2>
+          <p>{a["note"]}</p>
+          <p>Home visits include a full assessment, hands-on treatment where appropriate and exercises designed around your own space. Follow-ups can be in-home or online, whichever suits you.</p>
+        </div>
+        <div>
+          <h3>Neighbourhoods we visit</h3>
+          <ul class="chips">{nearby}</ul>
+          <p class="muted" style="margin-top:1rem">Not sure if we come to your street? <a href="tel:{PHONE_TEL}">Call us</a> or <a href="{WHATSAPP}" rel="noopener">send a WhatsApp message</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint">
+      <div class="container">
+        <div class="section-heading"><h2>Services available in {a["name"]}</h2></div>
+        <div class="grid grid-4">
+{svc}
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <div class="section-heading section-heading--center"><h2>Common questions</h2></div>
+        {faq_html(faqs)}
+      </div>
+    </section>
+
+{cta_band()}'''
+    biz = {**BUSINESS, "areaServed": [{"@type": "Place", "name": f"{a['name']}, Ottawa, ON"}] + [{"@type": "Place", "name": n} for n in a["nearby"]]}
+    write(f"areas/{a['slug']}/index.html",
+          page(path=path, title=f"Physiotherapy in {a['name']} | In-Home & Virtual | Virtual Physio",
+               description=f"In-home and virtual physiotherapy in {a['name']}, Ottawa with a registered physiotherapist. Back and neck pain, injuries, post-surgery rehab, pelvic health.",
+               active=None, body=body, posts=POSTS, schema=ld(biz, breadcrumb_ld(trail), faq_ld(faqs))))
+
+
+def build_areas_index():
+    trail = [("Home", "/"), ("Areas we serve", "/areas")]
+    cards = "\n".join(f'''          <a class="card card--link" href="/areas/{a["slug"]}"><span class="icon">{icon("map")}</span><span class="card__text"><h3>{a["name"]}</h3><p>{", ".join(a["nearby"][:4])} and nearby</p></span><span class="card__cta">View {a["name"]} &rarr;</span></a>''' for a in AREA_PAGES)
+    areas = "".join(f"<li>{x}</li>" for x in AREAS)
+    body = f'''    <section class="page-hero">
+      <div class="container">
+        {breadcrumb_html(trail)}
+        <span class="eyebrow">Areas we serve</span>
+        <h1>In-home physiotherapy across Ottawa</h1>
+        <p>We visit homes across Ottawa and nearby communities. Virtual sessions are available anywhere in Ontario.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-4">
+{cards}
+        </div>
+        <h2 style="margin-top:3rem">All areas we visit</h2>
+        <ul class="chips">{areas}</ul>
+        <p class="muted" style="margin-top:1rem">Don't see your area? <a href="tel:{PHONE_TEL}">Call</a> or <a href="{WHATSAPP}" rel="noopener">WhatsApp</a> us to check.</p>
+      </div>
+    </section>
+
+{cta_band()}'''
+    write("areas/index.html", page(path="/areas", title="Areas We Serve | In-Home Physiotherapy Ottawa | Virtual Physio",
+                                   description="In-home physiotherapy across Ottawa: Kanata, Barrhaven, Orléans, Nepean, Stittsville, Manotick and more. Virtual care anywhere in Ontario.",
+                                   active=None, body=body, posts=POSTS, schema=ld(breadcrumb_ld(trail))))
+
+
 # ── Booking (also the contact page) ────────────────────────
 def build_booking():
     trail = [("Home", "/"), ("Book an appointment", "/booking")]
@@ -643,7 +739,7 @@ def build_booking():
       <div class="container">
         {breadcrumb_html(trail)}
         <h1>Book an appointment</h1>
-        <p>Send a request in about a minute. We'll confirm your appointment by phone, email or WhatsApp, usually the same day.</p>
+        <p>Send a request in about a minute. We'll contact you by phone, email or WhatsApp to confirm your appointment.</p>
       </div>
     </section>
 
@@ -762,7 +858,7 @@ def build_booking():
     schema = ld({**BUSINESS}, breadcrumb_ld(trail),
                 {"@type": "ContactPage", "url": f"{SITE}/booking", "name": "Book an appointment", "about": {"@id": f"{SITE}/#business"}})
     write("booking.html", page(path="/booking", title="Book a Physiotherapy Appointment | Virtual Physio Ottawa",
-                               description="Book virtual or in-home physiotherapy in Ottawa in about a minute, or call or WhatsApp us. Free 15-minute consultations. Mon–Sat, 9 AM–7 PM.",
+                               description="Book virtual or in-home physiotherapy in Ottawa in about a minute, or call or WhatsApp us. Mon–Sat, 9 AM–7 PM.",
                                active="/booking#contact", body=body, posts=POSTS, schema=schema))
 
 
@@ -806,6 +902,7 @@ def build_privacy():
 def build_sitemap():
     urls = [("/", "1.0"), ("/services", "0.9"), ("/booking", "0.9"), ("/about", "0.8"), ("/blog", "0.8"), ("/privacy", "0.3")]
     urls += [(f"/services/{s['slug']}", "0.9") for s in SERVICE_PAGES]
+    urls += [("/areas", "0.7")] + [(f"/areas/{a['slug']}", "0.8") for a in AREA_PAGES]
     items = [f"  <url><loc>{SITE}{u}</loc><lastmod>{TODAY}</lastmod><priority>{pr}</priority></url>" for u, pr in urls]
     for p in POSTS:
         items.append(f"  <url><loc>{SITE}/blog/{p['slug']}</loc><lastmod>{p.get('updated', TODAY)}</lastmod><priority>0.7</priority></url>")
@@ -821,6 +918,9 @@ if __name__ == "__main__":
     build_blog()
     for p in POSTS:
         build_post(p)
+    build_areas_index()
+    for a in AREA_PAGES:
+        build_area_page(a)
     build_booking()
     build_privacy()
     build_sitemap()

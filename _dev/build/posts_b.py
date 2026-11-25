@@ -91,8 +91,8 @@ POSTS_B = [
 <p>Pelvic floor strengthening is very effective for many people with stress leakage. But some people have pelvic floor muscles that are too tense rather than weak, and doing more squeezing can make pain worse. Others squeeze the wrong muscles without realizing it. A proper assessment makes sure you're doing the right exercise, correctly, for your situation.</p>
 
 <h2 id="appointment">What happens at an appointment?</h2>
-<p>Your first visit starts with a detailed, private conversation about your symptoms, bladder and bowel habits, pregnancies and births, and goals. Your physiotherapist will then explain the assessment options. These may include looking at your posture, breathing, abdominal wall and hips, and, with your consent, an internal assessment of the pelvic floor muscles.</p>
-<p>You are always in control. You can ask questions at any point, decline any part of the assessment and stop at any time. Treatment can still go ahead without an internal exam.</p>
+<p>Your first visit starts with a detailed, private conversation about your symptoms, bladder and bowel habits, pregnancies and births, and goals. Your physiotherapist will then explain the assessment options. These may include looking at your posture, breathing, abdominal wall and hips. Some pelvic health physiotherapists also offer an internal assessment of the pelvic floor muscles. In Ontario, only physiotherapists rostered with the College of Physiotherapists of Ontario for this controlled act can perform it, and it's always optional.</p>
+<p>You are always in control. You can ask questions at any point, decline any part of the assessment and stop at any time. Many treatments can go ahead without an internal exam.</p>
 
 <h2 id="treatment">Treatment may include</h2>
 <ul>
@@ -114,7 +114,7 @@ POSTS_B = [
 """,
 "faqs": [
  ("Is leaking after having a baby normal?", "It's common, but it isn't something you have to accept. Pelvic floor physiotherapy is a recommended first-line treatment for stress urinary incontinence."),
- ("Do I have to have an internal exam?", "No. An internal assessment can give useful information, but it's always optional and only done with your consent. Treatment can still be effective without it."),
+ ("Do I have to have an internal exam?", "No. An internal assessment can give useful information, but it's always optional, requires your consent, and in Ontario can only be done by a physiotherapist rostered with the College for it. Many treatments can go ahead without one."),
  ("How long does pelvic floor training take to work?", "Many people notice improvement in 6 to 12 weeks of consistent training. Muscle strength continues to improve for several months."),
 ],
 "related": ["postpartum-core-recovery-diastasis-recti", "virtual-vs-in-person-physiotherapy", "physiotherapy-cost-coverage-ontario"],
@@ -170,7 +170,7 @@ POSTS_B = [
 </ol>
 
 <h2 id="virtual">Can an injury be assessed virtually?</h2>
-<p>Often, yes. A physiotherapist can guide you through movement and strength tests on video, give advice and start your exercise program, all without travel. If anything suggests you need hands-on testing or imaging, they'll let you know. A <a href="/booking?service=Free%2015-Min%20Consultation">free 15-minute consultation</a> is an easy way to find out which option suits you.</p>
+<p>Often, yes. A physiotherapist can guide you through movement and strength tests on video, give advice and start your exercise program, all without travel. If anything suggests you need hands-on testing or imaging, they'll let you know. If you're not sure which option suits you, <a href="/booking">send a request</a> or call us and we'll talk it through.</p>
 """,
 "faqs": [
  ("Do I need a referral to see a physiotherapist in Ontario?", "No. You can book directly with a registered physiotherapist. Some insurance plans require a doctor's note for reimbursement, so check your plan."),

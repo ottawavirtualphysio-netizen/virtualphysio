@@ -225,8 +225,8 @@ POSTS_C = [
 "description": "What to do after a car accident in Ontario, whiplash recovery, and how accident benefits and the Minor Injury Guideline work.",
 "category": "MVA Rehab",
 "published": "2026-11-25",
-"image": "side-lying-rehab",
-"image_alt": "Physiotherapist guiding a man through a side-lying hip and back exercise",
+"image": "knee-hands-on",
+"image_alt": "Physiotherapist's hands assessing a patient's knee",
 "lead": "After a car accident, pain and stiffness often show up a day or two later. Getting assessed early helps your recovery and makes the insurance process smoother.",
 "body": """
 <div class="notice">This article is general information, not legal or insurance advice. Talk to your insurer, and consider a licensed paralegal or lawyer, about your specific claim.</div>

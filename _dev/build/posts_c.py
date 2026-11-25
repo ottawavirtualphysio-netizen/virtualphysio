@@ -21,7 +21,7 @@ POSTS_C = [
 </ol>
 
 <h2 id="evidence">Does it actually work?</h2>
-<p>For many musculoskeletal conditions, research has found that telerehabilitation can lead to improvements in pain and function similar to in-person care, particularly when treatment is centred on exercise and education. This includes many cases of back and neck pain, knee osteoarthritis and rehab after joint replacement. Patient satisfaction is generally high, mostly because of the convenience.</p>
+<p>For many musculoskeletal conditions, research reviews have found that real-time telerehabilitation can lead to improvements in pain and function comparable to in-person care, particularly when treatment is centred on exercise and education (see references). Results vary by condition and person, and virtual care isn't right for everyone. Your physiotherapist will tell you if in-person care would suit you better.</p>
 
 <h2 id="good-for">Virtual physiotherapy is a good fit for</h2>
 <ul>
@@ -71,11 +71,12 @@ POSTS_C = [
 <p>Virtual sessions are one-on-one, and your health information is kept confidential, just as it is in person. Choose a private room for the call if you can.</p>
 """,
 "faqs": [
- ("Is virtual physiotherapy as effective as in-person?", "For many conditions where exercise and education are the main treatment, research shows similar results. Your physiotherapist will tell you if hands-on or in-person care would serve you better."),
+ ("Is virtual physiotherapy as effective as in-person?", "For many conditions where exercise and education are the main treatment, research reviews suggest results can be comparable. Your physiotherapist will tell you if hands-on or in-person care would serve you better."),
  ("What do I need for a virtual physiotherapy appointment?", "A phone, tablet or computer with a camera, a stable internet connection, a little floor space and comfortable clothing."),
  ("Is virtual physiotherapy covered by insurance?", "Many extended health plans in Canada cover virtual physiotherapy by a registered physiotherapist, but check your plan's wording or call your insurer to confirm."),
 ],
 "related": ["in-home-physiotherapy-ottawa", "tech-neck-posture-pain", "physiotherapy-cost-coverage-ontario"],
+"refs": [("Cottrell MA et al. Real-time telerehabilitation for the treatment of musculoskeletal conditions is effective and comparable to standard practice: a systematic review and meta-analysis. Clin Rehabil. 2017.", "https://pubmed.ncbi.nlm.nih.gov/27141087/"), ("Seron P et al. Effectiveness of telerehabilitation in physical therapy: a rapid overview. Phys Ther. 2021.", "https://pubmed.ncbi.nlm.nih.gov/33561280/")],
 },
 
 {
@@ -133,7 +134,7 @@ POSTS_C = [
 </table>
 
 <h2 id="physio">How physiotherapy helps back pain</h2>
-<p>A physiotherapist will check for red flags, assess how you move and what aggravates and eases your pain, and explain what's going on. Treatment typically includes a graded exercise program, hands-on techniques for short-term relief, advice on sleep, work and lifting, and a plan to prevent future flare-ups. Exercise therapy is one of the most consistently recommended treatments for persistent low back pain.</p>
+<p>A physiotherapist will check for red flags, assess how you move and what aggravates and eases your pain, and explain what's going on. Treatment typically includes a graded exercise program, hands-on techniques for short-term relief, advice on sleep, work and lifting, and a plan to prevent future flare-ups. A Cochrane review found moderate-certainty evidence that exercise probably reduces pain in chronic low back pain compared with no treatment or usual care (see references).</p>
 
 <h2 id="when-physio">When to book</h2>
 <ul>
@@ -149,6 +150,7 @@ POSTS_C = [
  ("Should I see a physiotherapist or a doctor for back pain?", "If you have any red-flag symptoms, see a doctor or go to the emergency department. Otherwise, you can book directly with a physiotherapist in Ontario, and they'll refer you if needed."),
 ],
 "related": ["tech-neck-posture-pain", "when-to-see-physiotherapist", "virtual-vs-in-person-physiotherapy"],
+"refs": [("Hayden JA et al. Exercise therapy for chronic low back pain. Cochrane Database Syst Rev. 2021.", "https://pubmed.ncbi.nlm.nih.gov/34580864/")],
 },
 
 {
@@ -225,8 +227,8 @@ POSTS_C = [
 "description": "What to do after a car accident in Ontario, whiplash recovery, and how accident benefits and the Minor Injury Guideline work.",
 "category": "MVA Rehab",
 "published": "2026-11-25",
-"image": "side-lying-rehab",
-"image_alt": "Physiotherapist guiding a man through a side-lying hip and back exercise",
+"image": "knee-hands-on",
+"image_alt": "Physiotherapist's hands assessing a patient's knee",
 "lead": "After a car accident, pain and stiffness often show up a day or two later. Getting assessed early helps your recovery and makes the insurance process smoother.",
 "body": """
 <div class="notice">This article is general information, not legal or insurance advice. Talk to your insurer, and consider a licensed paralegal or lawyer, about your specific claim.</div>
@@ -251,7 +253,7 @@ POSTS_C = [
 </ul>
 
 <h2 id="whiplash">Whiplash: what helps</h2>
-<p>Most people with whiplash improve within weeks to a few months. Research consistently supports staying active, doing gentle neck movement early and following a graded exercise program, rather than wearing a soft collar or resting for long periods. Physiotherapy may include:</p>
+<p>Many people with whiplash improve over weeks to a few months, though recovery varies. Clinical guidance generally favours staying active, gentle neck movement and a graded exercise program over wearing a soft collar or resting for long periods. Physiotherapy may include:</p>
 <ul>
   <li>Reassurance and clear education about expected recovery</li>
   <li>Gentle range-of-motion exercises, progressing to strengthening</li>
@@ -270,7 +272,7 @@ POSTS_C = [
 </ul>
 
 <h2 id="why-early">Why start physiotherapy early?</h2>
-<p>Early assessment documents your injuries, gives you a plan to stay active safely and can prevent short-term pain from becoming long-term. It also helps make sure your treatment is planned within the funding that's available to you.</p>
+<p>An early assessment documents your injuries and gives you a plan to stay active safely. It also helps make sure your treatment is planned within the funding that's available to you.</p>
 
 <h2 id="virtual-home">In-home and virtual MVA rehab</h2>
 <p>After an accident you may not be able to drive, or you may not want to. In-home and virtual sessions let you start treatment without needing to get to a clinic. Call us at <a href="tel:+13432024226">+1 (343) 202-4226</a> to discuss your situation and what your insurer needs.</p>
@@ -278,7 +280,7 @@ POSTS_C = [
 "faqs": [
  ("Do I have to pay for physiotherapy after a car accident in Ontario?", "Treatment is often funded through your own auto insurance accident benefits and any extended health benefits. Contact your insurer to open a claim and confirm what's covered."),
  ("What is the Minor Injury Guideline?", "It's a framework under Ontario's accident benefits rules for injuries like sprains, strains and whiplash. It limits medical and rehabilitation benefits for those injuries to $3,500."),
- ("How long does whiplash take to heal?", "Many people improve significantly within a few weeks to three months. Staying active and following a graded exercise program supports recovery."),
+ ("How long does whiplash take to heal?", "Recovery time varies. Many people improve over weeks to a few months. Your physiotherapist will set expectations after assessing you."),
 ],
 "related": ["tech-neck-posture-pain", "when-to-see-physiotherapist", "physiotherapy-cost-coverage-ontario"],
 },
@@ -370,7 +372,7 @@ POSTS_C = [
 <h2 id="treatment">How vestibular rehabilitation works</h2>
 <p>A physiotherapist will ask detailed questions about your dizziness, then test eye movements, balance, walking and, if appropriate, positional tests for BPPV. Treatment is tailored to the cause:</p>
 <ul>
-  <li><strong>Repositioning manoeuvres</strong>, such as the Epley manoeuvre for BPPV, guide the displaced crystals back to where they belong. Many people improve after one to a few treatments.</li>
+  <li><strong>Repositioning manoeuvres</strong>, such as the Epley manoeuvre for BPPV, guide the displaced crystals back to where they belong. Research reviews have found the Epley manoeuvre is effective for posterior-canal BPPV in the short term (see references).</li>
   <li><strong>Gaze stabilization exercises</strong> train your eyes and inner ear to work together during head movement.</li>
   <li><strong>Habituation exercises</strong> gradually reduce sensitivity to movements or environments that trigger dizziness.</li>
   <li><strong>Balance and walking training</strong> builds steadiness and confidence.</li>
@@ -392,10 +394,11 @@ POSTS_C = [
 <p>Many parts can, including gaze stabilization, habituation and balance exercises, as long as you have a safe set-up and someone nearby if needed. Positional testing and repositioning for BPPV are usually best done in person.</p>
 """,
 "faqs": [
- ("Can physiotherapy cure vertigo?", "For BPPV, the most common cause of vertigo, repositioning manoeuvres done by a physiotherapist are often very effective, sometimes within one to a few sessions. Other causes improve with targeted exercise."),
+ ("Can physiotherapy help vertigo?", "For BPPV, a common cause of vertigo, research supports repositioning manoeuvres such as the Epley. Other causes of dizziness may be helped by targeted exercise. A physiotherapist will assess which applies to you."),
  ("What does a vestibular physiotherapist do?", "They assess the cause of your dizziness or imbalance and treat it with repositioning techniques, eye-head coordination exercises, habituation and balance training."),
  ("When should dizziness be checked by a doctor?", "Seek urgent care for sudden dizziness with stroke-like symptoms, chest pain or fainting. See a doctor if dizziness is new, frequent, or comes with hearing loss or ringing in the ears."),
 ],
 "related": ["in-home-physiotherapy-ottawa", "car-accident-physiotherapy-ontario", "when-to-see-physiotherapist"],
+"refs": [("Hilton MP, Pinder DK. The Epley (canalith repositioning) manoeuvre for benign paroxysmal positional vertigo. Cochrane Database Syst Rev. 2014.", "https://www.cochrane.org/CD003162/ENT_epley-manoeuvre-for-benign-paroxysmal-positional-vertigo-bppv")],
 },
 ]

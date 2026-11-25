@@ -441,3 +441,4 @@ a.card--link:hover h3 { color: var(--blue); }
   .mobile-bar { grid-template-columns: 1fr 1fr 1.3fr; }
   .mobile-bar .wa { border: 1.5px solid #25d366; color: #128c4a; }
 }
+.refs { font-size: .95rem; color: var(--grey); } .refs li { margin-bottom: .5rem; }

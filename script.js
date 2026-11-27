@@ -170,6 +170,10 @@
     if (!form.querySelector('input[name="service"]:checked')) fail(get("service"), "Please choose what you need help with.");
     var visit = form.querySelector('input[name="visitType"]:checked');
     if (!visit) fail(get("visitType"), "Please choose how you'd like to be seen.");
+    var svcPick = form.querySelector('input[name="service"]:checked');
+    if (svcPick && visit && svcPick.value === "Acupuncture / Dry Needling" && visit.value === "Virtual") {
+      fail(get("visitType"), "Acupuncture and dry needling are in person only. Please choose an in-home or clinic room visit.");
+    }
     else if (visit.value === "In my home" && !get("area").value.trim()) fail(get("area"), "Please tell us your area so we can plan the visit.");
     if (!get("name").value.trim()) fail(get("name"), "Please enter your name.");
     if (!validPhone(get("phone").value)) fail(get("phone"), "Please enter a valid phone number, e.g. 343 202 4226.");

@@ -442,3 +442,10 @@ a.card--link:hover h3 { color: var(--blue); }
   .mobile-bar .wa { border: 1.5px solid #25d366; color: #128c4a; }
 }
 .refs { font-size: .95rem; color: var(--grey); } .refs li { margin-bottom: .5rem; }
+
+/* Intro-call card spans the full grid row */
+.grid-4 > .card--featured { grid-column: 1 / -1; flex-direction: row; align-items: center; gap: 1.1rem; padding: 1.2rem 1.6rem; }
+.grid-4 > .card--featured .icon { margin: 0; flex: none; }
+.grid-4 > .card--featured .card__text p { margin: .15rem 0 0; }
+.grid-4 > .card--featured .card__cta { margin: 0 0 0 auto; white-space: nowrap; }
+@media (max-width: 640px) { .grid-4 > .card--featured .card__cta { display: none; } }

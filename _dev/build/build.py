@@ -79,6 +79,7 @@ BOOK_SERVICES = [
     ("Sports Injury Care", "Injury & return to sport"),
     ("Pain Management", "Back, neck & joint pain"),
     ("Car Accident (MVA) Rehab", "Whiplash & MVA"),
+    ("Acupuncture / Dry Needling", "In person only"),
 ]
 VISIT_TYPES = [("Virtual", "Video call from anywhere"), ("In my home", "Ottawa area"),
                ("Home clinic room", "In person, by request"), ("Not sure yet", "We'll help you choose")]
